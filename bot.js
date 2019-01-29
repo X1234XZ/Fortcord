@@ -26,6 +26,14 @@ client.on('message', message => {
 	
 		 
      }
+	
+	 if (msg === prefix + 'server') {
+
+	 message.channel.send('**Join our support and official server!** ');
+		 
+	
+		 
+     }
 });
 
 client.login('NTM2NTk0ODMxNjQ5Mjc1OTI0.Dy_c1w.T07pqYjt3qUQg8MSGErMiDBGKmU');
