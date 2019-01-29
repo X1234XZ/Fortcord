@@ -13,7 +13,7 @@ client.on('message', message => {
 
      if (msg === prefix + 'help') {
 
-	 message.channel.send(' Want to learn about commands? Need help? Visit http://fortcord.com/index.php/commands/ \n \n Plus, you can discover the whole website with all info about the bot!!! \n If you have any questions, contact me by mail using  **xxgamerxx.ca@gmail.com** or on discord using \n **!!![BetterThanYou]!!!#1466**. \n \n *If you want to donate tap* `f!donate` *and it will give you the donate link.*');
+	 message.channel.send(' Want to learn about commands? Need help? Visit http://fortcord.com/index.php/commands/ **Incomplete site* \n \n Plus, you can discover the whole website with all info about the bot!!! \n If you have any questions, contact me by mail using  **xxgamerxx.ca@gmail.com** or on discord using \n **!!![BetterThanYou]!!!#1466**. \n \n *If you want to donate tap* `f!donate` *and it will give you the donate link.*');
 		 
 	
 		 
