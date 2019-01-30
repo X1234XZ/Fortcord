@@ -34,7 +34,7 @@ client.on('message', message => {
 	
 	if (msg === prefix + 'vote') {
 	
-	message.channelsend('<@id-of-the-user> Hello')
+	message.channel.send('<@id-of-the-user> Hello')
 	}
 	
 	
