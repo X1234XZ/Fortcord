@@ -34,7 +34,7 @@ client.on('message', message => {
 	
 	if (msg === prefix + 'vote') {
 	
-	message.channel.send('<@id-of-the-user> Hello')
+	guild.systemChannel.send("@" + memberTag + "  has joined the server!")
 	}
 	
 	
