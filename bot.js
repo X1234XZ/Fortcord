@@ -33,8 +33,8 @@ client.on('message', message => {
 	
 	if (msg === prefix + 'vote') {
 	
-	message.channel.send('Link to vote: https://discordbots.org/bot/536594831649275924 \n ***You have to wait 12 hours before you vote gain.**')
-	 \n You have to wait 12 hours before you vote gain
+	message.channel.send('Link to vote: https://discordbots.org/bot/536594831649275924 \n \n ***You have to wait 12 hours before you vote gain.**')
+	 
 	}
 });
 
