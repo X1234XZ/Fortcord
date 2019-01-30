@@ -8,6 +8,7 @@ client.on('ready', () => {
 client.on('message', message => {
         var prefix = 'f!'
      var msg = message.content;
+	
 	 
 	 
 
@@ -31,15 +32,12 @@ client.on('message', message => {
 		 
 	 }
 	
+	if (msg === prefix + 'vote') {
+	
+	message.channelsend('<@id-of-the-user> Hello')
+	}
 	
 	
-	client.on("guildMemberAdd", (member) => {
-		if (msg === prefix + 'vote') 
-  let guild = member.guild;
-  let memberTag = member.user.tag;
-  if(guild.systemChannel){
-    guild.systemChannel.send("@" + memberTag + "  has joined the server!")
-  }
 	
 });
 
