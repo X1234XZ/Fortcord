@@ -30,6 +30,12 @@ client.on('message', message => {
 		 message.channel.send('**Join the support server!!!** \n You can also chat with others. https://discord.gg/HG4BUQD')
 		 
 	 }
+	
+	if (msg === prefix + 'vote') {
+	
+	message.channel.send('Link to vote: https://discordbots.org/bot/536594831649275924 \n ***You have to wait 12 hours before you vote gain.**')
+	 \n You have to wait 12 hours before you vote gain
+	}
 });
 
 client.login('NTM2NTk0ODMxNjQ5Mjc1OTI0.Dy_c1w.T07pqYjt3qUQg8MSGErMiDBGKmU');
