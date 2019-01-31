@@ -9,8 +9,6 @@ client.on('message', message => {
     var prefix = 'f!'
     var msg = message.content;
 
-client.on("ready", () => {
-    client.user.setActivity("my code", { type: "WATCHING"})
 })
 
 
