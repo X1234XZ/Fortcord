@@ -20,13 +20,13 @@ client.on('message', message => {
 
     if (msg === prefix + 'donate') {
 
-        message.channel.send(" " + message.author.toString() + "You want to donate? No problem, go on this link and buy the pack you want! \n \n https://donatebot.io/checkout/539435332198858753 \n Enjoy! \n \n ***Contact me if there is any problems.**");
+        message.channel.send(" " + message.author.toString() + " you want to donate? No problem, go on this link and buy the pack you want! \n \n https://donatebot.io/checkout/539435332198858753 \n Enjoy! \n \n ***Contact me if there is any problems.**");
 
     }
 
     if (msg === prefix + 'server') {
 
-        message.channel.send(" " + message.author.toString() + "**Join the support server!!!** \n You can also chat with others. https://discord.gg/HG4BUQD");
+        message.channel.send(" " + message.author.toString() + "** Come and join the support server!!!** \n You can also chat with others. https://discord.gg/HG4BUQD");
 
     }
 
@@ -38,7 +38,7 @@ client.on('message', message => {
 
     if (msg === prefix + 'vote') {
 
-        message.channel.send(" " + message.author.toString() + "Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
+        message.channel.send(" " + message.author.toString() + " Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
 
 })
