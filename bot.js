@@ -34,8 +34,14 @@ client.on('message', message => {
 	
 	if (msg === prefix + 'invite') {
 	
-	message.channel.send('**Invite the bot to other servers!!!** https://discordapp.com/oauth2/authorize?client_id=536594831649275924&scope=bot&permissions=252928')
+	message.channel.send('**Invite the bot to other servers!!!** \n Link: https://discordapp.com/oauth2/authorize?client_id=536594831649275924&scope=bot&permissions=252928')
 	
+	}
+	
+	if (msg === prefix + 'vote') {
+	
+	message.channel.send('Sorry, this command is not assigned yet. \n **Please wait patiently, thank you.**')
+		
 	}
 	
 	
