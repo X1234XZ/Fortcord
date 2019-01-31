@@ -32,6 +32,12 @@ client.on('message', message => {
 		 
 	 }
 	
+	if (msg === prefix + 'invite') {
+	
+	message.channel.send('**Invite the bot to other servers!!!** https://discordapp.com/oauth2/authorize?client_id=536594831649275924&scope=bot&permissions=252928')
+	
+	}
+	
 	
 	
 	
