@@ -42,7 +42,7 @@ let userVar = message.author
 	
 	if (msg === prefix + 'vote') {
 	
-	message.channel.send('"Oh no," + "@" + userVar + " got demolished by **Mr. Smiles**"')
+	message.channel.send(<@id>'Hello')
 		
 	}
 	
