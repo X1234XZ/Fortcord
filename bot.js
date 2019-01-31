@@ -38,7 +38,7 @@ client.on('message', message => {
 
     if (msg === prefix + 'vote') {
 
-        message.channel.send("Hello " + message.author.toString() + ", and welcome!");
+        message.channel.send("message.author.toString() + 'Sorry about that, but the command is currently unavailable. \n **Please wait patiently, thank you!'");
 
     }
 
