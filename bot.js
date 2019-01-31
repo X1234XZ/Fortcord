@@ -9,7 +9,10 @@ client.on('message', message => {
         var prefix = 'f!'
      var msg = message.content;
 	
-let userVar = message.author
+// Set the bot's "Playing: " status (Playing!)
+client.on("ready", () => {
+    client.user.setActivity("my code", { type: "Fortcord"})
+})
 	
 	 
 	 
@@ -42,7 +45,7 @@ let userVar = message.author
 	
 	if (msg === prefix + 'vote') {
 	
-	message.channel.send('<@id> Hello')
+	message.channel.send(`Hello ${user}, and welcome!`);
 		
 	}
 	
