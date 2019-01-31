@@ -49,7 +49,6 @@ client.on('message', message => {
 	
 	
 	
-});
 
 client.login('NTM2NTk0ODMxNjQ5Mjc1OTI0.Dy_c1w.T07pqYjt3qUQg8MSGErMiDBGKmU');
 
