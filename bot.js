@@ -9,6 +9,8 @@ client.on('message', message => {
         var prefix = 'f!'
      var msg = message.content;
 	
+let userVar = message.author
+	
 	 
 	 
 
@@ -40,7 +42,7 @@ client.on('message', message => {
 	
 	if (msg === prefix + 'vote') {
 	
-	message.channel.send('Sorry, this command is not assigned yet. \n **Please wait patiently, thank you.**')
+	message.channel.send('"Oh no," + "@" + userVar + " got demolished by **Mr. Smiles**"')
 		
 	}
 	
