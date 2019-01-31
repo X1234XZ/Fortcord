@@ -45,7 +45,7 @@ client.on("ready", () => {
 	
 	if (msg === prefix + 'vote') {
 	
-	message.channel.send(`Hello ${user}, and welcome!`);
+	message.channel.send("Hello " + message.author.toString() + ", and welcome!");
 		
 	}
 	
