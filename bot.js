@@ -8,10 +8,7 @@ client.on('ready', () => {
 client.on('message', message => {
         var prefix = 'f!'
      var msg = message.content;
-	
-// Set the bot's "Playing: " status (Playing!)
-client.on("ready", () => {
-    client.user.setActivity("my code", { type: "Fortcord"})
+
 })
 	
 	 
