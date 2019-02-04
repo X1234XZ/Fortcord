@@ -9,7 +9,6 @@ client.on('message', message => {
     var prefix = 'f!'
     var msg = message.content;
 
-})
 
 
     if (msg === prefix + 'help') {
