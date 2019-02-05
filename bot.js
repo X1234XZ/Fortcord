@@ -40,9 +40,7 @@ client.on('message', message => {
 
         message.channel.send(" " + message.author.toString() + " Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
-    if (msg === prefix + 'break') 
-   message.channel.send(" " + message.author.toString() + "hello", {
-    file: "https://gamepedia.cursecdn.com/minecraft_gamepedia/a/a2/Iron_Pickaxe.png?version=a230e307590bcdc33c7cd4de131c13c0" // Or replace with FileOptions object
+   
 })
 
 
