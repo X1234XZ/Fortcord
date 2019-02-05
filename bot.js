@@ -40,6 +40,11 @@ client.on('message', message => {
 
         message.channel.send(" " + message.author.toString() + " Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
+    
+    if (msg === prefix + 'hello') {
+        
+        message.channel.send(" " + message.author.toString() + ">> Hello!!!");
+        }
    
 })
 
