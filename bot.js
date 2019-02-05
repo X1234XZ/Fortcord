@@ -40,27 +40,9 @@ client.on('message', message => {
 
         message.channel.send(" " + message.author.toString() + " Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
-    
-    //Checks if it starts with (/profile) 
-if(message.content.startsWith(`f!profile`)){
-    //Defines the user that needs to be searched to be either the user pinged OR the user that called the command
-    let user = message.mentions.users.first(); || message.author;
-    let embed = new Discord.RichEmbed()
-    .setTitle(`Profile`);
-    .setDescription(`Profile of ${user.username}`);
-    //Note: .send(embed) is allowed but not recommended and it's easier and safer todo .send({embed}) or in your case .send({embed:botembed})
-    message.channel.send({embed});    
-}
-    let args = message.content.split(` `);
-if(args[0]===`/profile`){
-    args.shift();
-    //args is now all the arguments that was put in after (/profile)
-
-    //So a message (/profile @user page 3)
-    //args would equal ["@user", "page", "3"]
-
-}
-
+    if (msg === prefix + 'break') 
+   message.channel.send(" " + message.author.toString() + "hello", {
+    file: "https://gamepedia.cursecdn.com/minecraft_gamepedia/a/a2/Iron_Pickaxe.png?version=a230e307590bcdc33c7cd4de131c13c0" // Or replace with FileOptions object
 })
 
 
