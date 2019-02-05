@@ -41,22 +41,25 @@ client.on('message', message => {
         message.channel.send(" " + message.author.toString() + " Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
     
-    if (message.content === '/profile') {
-      let botembed = new Discord.RichEmbed()
-                .setTitle("**__Exoly User Profile__**")
-                .setTimestamp(new Date())
-                .setColor("#4286f4")
-                .setFooter("Exolia", `${bot.user.avatarURL}`)
-                .setThumbnail(`${message.author.avatarURL}`)
-                .addField("Username :", `${message.author.username}`, inline = true)
-                .addField("Exolytes :", "|---|", inline = true)
-                .addField("Played Time :", "|---|", inline = true)
-                .addField("Faction :", "Armada", inline = true);
-       if (shouldResponseTo(message)) {
-           message.delete()
-           return message.channel.send(botembed);
-       }
-    }
+    //Checks if it starts with (/profile) 
+if(message.content.startsWith(`f!profile`)){
+    //Defines the user that needs to be searched to be either the user pinged OR the user that called the command
+    let user = message.mentions.users.first(); || message.author;
+    let embed = new Discord.RichEmbed()
+    .setTitle(`Profile`);
+    .setDescription(`Profile of ${user.username}`);
+    //Note: .send(embed) is allowed but not recommended and it's easier and safer todo .send({embed}) or in your case .send({embed:botembed})
+    message.channel.send({embed});    
+}
+    let args = message.content.split(` `);
+if(args[0]===`/profile`){
+    args.shift();
+    //args is now all the arguments that was put in after (/profile)
+
+    //So a message (/profile @user page 3)
+    //args would equal ["@user", "page", "3"]
+
+}
 
 })
 
