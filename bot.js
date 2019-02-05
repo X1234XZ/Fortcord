@@ -41,7 +41,7 @@ client.on('message', message => {
         message.channel.send(" " + message.author.toString() + " Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
     
-    if (message.content === 'f!profile') {
+    if (message.content === '/profile') {
       let botembed = new Discord.RichEmbed()
                 .setTitle("**__Exoly User Profile__**")
                 .setTimestamp(new Date())
