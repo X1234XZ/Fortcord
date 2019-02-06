@@ -42,10 +42,13 @@ client.on('message', message => {
     }
     
     if (msg === prefix + 'break') {
+        var embed = new Discord.RichEmbed();
+        embed.setImage("http://fortcord.com/images/Letter-D-Free-PNG-Image.png", 10, 10);
         
-        message.channel.send("Hello", {
-    file: "http://fortcord.com/images/Letter-D-Free-PNG-Image.png"});
+         message.channel.send("Hello", {
+         embed: embed);
     }
+}});
 })
 
 
