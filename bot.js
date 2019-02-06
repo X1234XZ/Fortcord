@@ -46,7 +46,8 @@ client.on('message', message => {
         embed.setImage("http://fortcord.com/images/Letter-D-Free-PNG-Image.png", 10, 10);
         
          message.channel.send("Hello", {
-         embed: embed);
+            embed: embed
+         });
     }
 }});
 })
