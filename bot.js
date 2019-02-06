@@ -44,8 +44,7 @@ client.on('message', message => {
     if (msg === prefix + 'break') {
         
         message.channel.send("Hello", {
-    file: "http://fortcord.com/images/Letter-D-Free-PNG-Image.png" // Or replace with FileOptions object
-});
+    file: "http://fortcord.com/images/Letter-D-Free-PNG-Image.png"});
     }
 })
 
