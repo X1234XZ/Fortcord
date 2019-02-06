@@ -49,7 +49,7 @@ client.on('message', message => {
             embed: embed
          });
     }
-}});
+
 })
 
 
