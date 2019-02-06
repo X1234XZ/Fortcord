@@ -41,11 +41,11 @@ client.on('message', message => {
         message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
     
-    if (msg === prefix + 'hello') {
+    if (msg === prefix + 'break') {
         
-        message.channel.send(" " + message.author.toString() + "» Hello!!!");
-        }
-   
+        message.channel.sendMessage(Hello).attachments
+["",{http://fortcord.com/images/Letter-D-Free-PNG-Image.png"+icon+".png" }];
+    }
 })
 
 
