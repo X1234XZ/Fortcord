@@ -55,7 +55,6 @@ client.on('message', message => {
         .setColor(`RANDOM`)
         .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
         .addField('Status:', user.presence.status, true)
-        .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
         .setFooter(`ID: ${user.id}`)
         .setTimestamp();
 
