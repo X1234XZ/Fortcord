@@ -54,8 +54,8 @@ client.on('message', message => {
     },
     
     fields: [{
-        name: "Level: **20**",
-        value: " "
+        name: "",
+        value: "Level: **20**"
       },
           ],
     timestamp: new Date(),
