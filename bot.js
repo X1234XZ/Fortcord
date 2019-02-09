@@ -54,7 +54,6 @@ client.on('message', message => {
         .setAuthor(user.username + '#' + user.discriminator, user.displayAvatarURL)
         .setDescription(`${user}`)
         .setColor(`RANDOM`)
-        .setThumbnail(`${user.displayAvatarURL}`)
         .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
         .addField('Status:', user.presence.status, true)
         .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
