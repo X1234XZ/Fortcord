@@ -43,7 +43,7 @@ client.on('message', message => {
         message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
     
-    if (m.content.startsWith(prefix + "userinfo")){
+    if (m.content.startsWith(prefix + 'userinfo')){
     
     let user = m.mentions.users.first() || m.author;
         
