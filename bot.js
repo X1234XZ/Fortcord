@@ -50,7 +50,7 @@ client.on('message', message => {
    
     let embed = new Discord.RichEmbed()
         .setAuthor(user.username + '#' + user.discriminator, user.displayAvatarURL)
-        .addField("Hello", true)
+        .addField("Hello", "my name is xizong")
 
     message.channel.send({ embed: embed });
     return;
