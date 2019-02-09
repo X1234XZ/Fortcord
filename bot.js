@@ -44,11 +44,12 @@ client.on('message', message => {
     }
     
     if (msg === prefix + 'userinfo'){
+        let user = message.mentions.users.first() || message.author;
         message.channel.send({embed: {
     color: 3447003,
     author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
+      name: user.username,
+      icon_url: user.avatarURL
     },
     title: "This is an embed",
     url: "http://google.com",
@@ -67,10 +68,7 @@ client.on('message', message => {
       }
     ],
     timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "© Example"
-    }
+    
   }
 });
     }
