@@ -55,15 +55,23 @@ client.on('message', message => {
     
     fields: [{
         name: "Profile",
-        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Clan:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance** 328755"
+        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Clan:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755"
       },
           ],
+            
+            
     timestamp: new Date(),
     
   }
 });
     }
-        
+    
+          
+          
+   if (msg === prefix + 'listemojis'){
+  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
+  message.channel.send(emojiList);
+}
     
     
     
