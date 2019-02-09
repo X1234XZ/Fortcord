@@ -63,7 +63,7 @@ client.on('message', message => {
         .addField(`Discriminator`, userinfo.discrim, true)
         .addField(`ID`, userinfo.id, true)
         .addField(`Status`, userinfo.status, true)
-        .addField(`Risgistered`, userinfo.registered)\
+        .addField(`Risgistered`, userinfo.registered)
         .addField(`Joined`, userinfo.joined)
 
     return m.channel.send(embed);
