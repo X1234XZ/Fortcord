@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 var auth = require('./config.json');
 const client = new Discord.Client();
-const moment = require('moment');
 
 
 
@@ -58,9 +57,9 @@ client.on('message', message => {
     fields: [{
         name: "Fields",
         value: "They can have different fields with small headlines."
-      }
+      }]
     
 })
-
+}
 
 client.login(auth.token);
