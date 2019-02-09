@@ -66,7 +66,7 @@ client.on('message', message => {
         .addField(`Risgistered`, userinfo.registered)
         .addField(`Joined`, userinfo.joined)
 
-    return m.channel.send(embed);
+    return message.channel.send(embed);
 
 }
     
