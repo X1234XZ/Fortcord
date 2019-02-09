@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 var auth = require('./config.json');
 const client = new Discord.Client();
-const moment = require("moment");
-require("moment-duration-format");
+const Discord = module.require('discord.js');
+const moment = require('moment');
+
+
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -43,31 +45,24 @@ client.on('message', message => {
         message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
     
-    if (message.content.startsWith(prefix + 'userinfo')) {
+    if (msg === prefix + 'userinfo'){
+    
+   let user = message.mentions.users.first() || message.author;
+    const joinDiscord = moment(user.createdAt).format('llll');
+    const joinServer = moment(user.joinedAt).format('llll');
+    let embed = new Discord.RichEmbed()
+        .setAuthor(user.username + '#' + user.discriminator, user.displayAvatarURL)
+        .setDescription(`${user}`)
+        .setColor(`RANDOM`)
+        .setThumbnail(`${user.displayAvatarURL}`)
+        .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('Status:', user.presence.status, true)
+        .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
+        .setFooter(`ID: ${user.id}`)
+        .setTimestamp();
 
-    let user = message.mentions.users.first() || message.author;
-
-    let userinfo = {};
-    userinfo.avatar = user.displayAvatarURL() //need discord.js version 12.0.0 to work
-    userinfo.name = user.username;
-    userinfo.discrim = `#${user.discriminator}`;
-    userinfo.id = user.id;
-    userinfo.status = user.presence.status;
-    userinfo.registered = moment.utc(message.guild.members.get(user.id).user.createdAt).format("dddd, MMMM Do, YYYY");
-    userinfo.joined = moment.utc(message.guild.members.get(user.id).JoinedAt).format("dddd, MMMM Do, YYYY");
-
-    const embed = new Discord.Message.Embed()
-        .setAuthor(user.tag, userinfo.avatar)
-        .setThumbnail(userinfo.avatar)
-        .addField(`username`, userinfo.name, true)
-        .addField(`Discriminator`, userinfo.discrim, true)
-        .addField(`ID`, userinfo.id, true)
-        .addField(`Status`, userinfo.status, true)
-        .addField(`Risgistered`, userinfo.registered)
-        .addField(`Joined`, userinfo.joined)
-
-    return message.channel.send(embed);
-
+    message.channel.send({ embed: embed });
+    return;
 }
     
 })
