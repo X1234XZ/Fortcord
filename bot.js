@@ -43,7 +43,7 @@ client.on('message', message => {
         message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
     }
     
-    if (msg === prefix + 'userinfo'){
+    if (msg === prefix + 'profile'){
         let user = message.mentions.users.first() || message.author;
         message.channel.send({embed: {
     color: 3447003,
@@ -55,7 +55,7 @@ client.on('message', message => {
     
     fields: [{
         name: "Profile",
-        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Clan:** None \n **Tier:** 14 \n **Tier XP:** 3/10"
+        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Clan:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance** 328755"
       },
           ],
     timestamp: new Date(),
