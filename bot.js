@@ -70,7 +70,7 @@ client.on('message', message => {
           
    if (msg === prefix + 'listemojis'){
   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
-  message.channel.send(emojiList);
+  message.channel.send(:thinking:);
 }
     
     
