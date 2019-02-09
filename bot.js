@@ -53,8 +53,8 @@ client.on('message', message => {
     userinfo.discrim = `#${user.discriminator}`;
     userinfo.id = user.id;
     userinfo.status = user.presence.status;
-    userinfo.registered = moment.utc(m.guild.members.get(user.id).user.createdAt).format("dddd, MMMM Do, YYYY");
-    userinfo.joined = moment.utc(m.guild.members.get(user.id).JoinedAt).format("dddd, MMMM Do, YYYY");
+    userinfo.registered = moment.utc(message.guild.members.get(user.id).user.createdAt).format("dddd, MMMM Do, YYYY");
+    userinfo.joined = moment.utc(message.guild.members.get(user.id).JoinedAt).format("dddd, MMMM Do, YYYY");
 
     const embed = new Discord.Message.Embed()
         .setAuthor(user.tag, userinfo.avatar)
