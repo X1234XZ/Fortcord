@@ -54,7 +54,7 @@ client.on('message', message => {
     },
     
     fields: [{
-        name: "",
+        name: "&nbsp;",
         value: "Level: **20**"
       },
           ],
