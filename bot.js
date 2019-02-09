@@ -45,7 +45,7 @@ client.on('message', message => {
     
     if (message.content.startsWith(prefix + 'userinfo')) {
 
-    let user = message.mentions.users.first() || m.author;
+    let user = message.mentions.users.first() || message.author;
 
     let userinfo = {};
     userinfo.avatar = user.displayAvatarURL() //need discord.js version 12.0.0 to work
