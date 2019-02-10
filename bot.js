@@ -40,7 +40,7 @@ client.on('message', message => {
 
     if (msg === prefix + 'vote') {
 
-        message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is not currently unavailable. \n **Please wait patiently, thank you!**");
+        message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is currently unavailable. \n **Please wait patiently, thank you!**");
     }
     
     if (msg === prefix + 'profile'){
@@ -65,15 +65,7 @@ client.on('message', message => {
   }
 });
     }
-    
-          
-          
-   if (msg === prefix + 'listemojis'){
-  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
-  message.channel.send(":thinking:");
-}
-    
-    
+
     
 })
 
