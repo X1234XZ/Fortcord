@@ -57,7 +57,19 @@ client.on('message', message => {
         name: "Profile",
         value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Clan:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass"
       },
+             
           ],
+            
+      fields: [{
+          
+          name: "Tools and ressources",
+          value: "`hhgfdsdfghjnbgfdfghjkjhgfdfghjkjhgfd`"
+          
+          
+          
+      },
+               
+               ]
             
             
     timestamp: new Date(),
