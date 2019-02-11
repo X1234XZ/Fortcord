@@ -69,10 +69,7 @@ client.on('message', message => {
           
       },
                
-               ]
-            
-            
-    timestamp: new Date(),
+      ],
     
   }
 });
