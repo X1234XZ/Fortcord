@@ -55,7 +55,7 @@ client.on('message', message => {
     
     fields: [{
         name: "Profile",
-        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass"
+        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:fortnite:544877199010824192>"
 
     },
      ],
@@ -97,7 +97,7 @@ client.on('message', message => {
     
     fields: [{
         name: "Profile",
-        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass"
+        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:fortnite:544877199010824192>"
 
     },
      ],
@@ -115,7 +115,7 @@ client.on('message', message => {
     
     fields: [{
         name: "Tools and ressources ",
-        value: " \n **Ressources** \n <:wood:544704700935831558> `x20000`  <:stone:544706153272180737> `x15456`  <:Metal:544706407719501836> `x9875` \n \n **Tools** \n <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
+        value: " \n **Ressources** \n <:wood:544704700935831558> `x20000`  <:stone:544706153272180737> `x15456`  <:Metal:544706407719501836> `x9875` \n \n **Tools** \n  <:fortnite:544877199010824192> `x1` <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
        
 
     },
