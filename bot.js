@@ -132,7 +132,7 @@ client.on('message', message => {
     
  if (msg === prefix + 'break'){
  
- message.channel.send(" " + message.author.toString() + "»You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737> and `10` <:Metal:544706407719501836> with your <:fortnite:544877199010824192>")
+ message.channel.send(" " + message.author.toString() + "»You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737>,  and `10` <:Metal:544706407719501836> with your <:fortnite:544877199010824192>")
  
  }
 
