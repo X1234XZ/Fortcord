@@ -55,7 +55,7 @@ client.on('message', message => {
     
     fields: [{
         name: "Profile",
-        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Clan:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass"
+        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass"
 
     },
      ],
@@ -69,13 +69,11 @@ client.on('message', message => {
     color: 3447003,
     author: {
         
-      name: user.username,
-      icon_url: user.avatarURL
     },
     
     fields: [{
         name: "Tools and ressources",
-        value: "1231sfsdfsdfefsdfsfeafesfdsfasefasef fsdfcafasgv fsgf dgfgcajkgf jhdfcag fjhbdfyagbsf ojhgsd ofvuhjca ascf adsf dsf casdf"
+        value: "<:wood:544704700935831558>`x20000` <:stone2:544706153272180737>`x15456` <:Metal_icon:544706407719501836>`x9875` <:ar:544706737194795009>`x2`"
 
     },
      ],
