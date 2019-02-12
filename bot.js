@@ -22,13 +22,13 @@ client.on('message', message => {
 
     if (msg === prefix + 'donate') {
 
-        message.channel.send(" " + message.author.toString() + "»You want to donate? No problem, go on this link and buy the pack you want! \n \n https://donatebot.io/checkout/539435332198858753 \n Enjoy! \n \n ***Contact me if there is any problems.**");
+        message.channel.send(" " + message.author.toString() + "»You want to donate? No problem, go on this link and buy the pack you want! \n https://donatebot.io/checkout/539435332198858753 \n Enjoy! \n ***Contact me if there is any problems.**");
 
     }
 
     if (msg === prefix + 'server') {
 
-        message.channel.send(" " + message.author.toString() + "**» Come and join the support server!!!** \n You can also chat with others. https://discord.gg/HG4BUQD");
+        message.channel.send(" " + message.author.toString() + "**» Come and join the support server!!!** \n You can also chat with others. https://discord.gg/rpbXdAX");
 
     }
 
@@ -128,6 +128,13 @@ client.on('message', message => {
         
         
     }
+    
+    
+ if (msg === prefix + 'break'){
+ 
+ message.channel.send(" " + message.author.toString() + "»You broke `30`<:wood:544704700935831558>, `40`<:stone:544706153272180737> and `10`<:Metal:544706407719501836>")
+ 
+ }
 
     
 })
