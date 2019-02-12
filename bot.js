@@ -56,17 +56,36 @@ client.on('message', message => {
     fields: [{
         name: "Profile",
         value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Clan:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass"
-       
-     
+
     },
-    
-             
-          ],
+     ],
             
    
     
         }
 });
+        
+ message.channel.send({embed: {
+    color: 3447003,
+    author: {
+        
+      name: user.username,
+      icon_url: user.avatarURL
+    },
+    
+    fields: [{
+        name: "Tools and ressources",
+        value: "1231sfsdfsdfefsdfsfeafesfdsfasefasef fsdfcafasgv fsgf dgfgcajkgf jhdfcag fjhbdfyagbsf ojhgsd ofvuhjca ascf adsf dsf casdf"
+
+    },
+     ],
+            
+   
+    
+        }
+});
+        
+        
     }
 
     
