@@ -73,7 +73,7 @@ client.on('message', message => {
     
     fields: [{
         name: "Tools and ressources",
-        value: "<:wood:544704700935831558>`x20000` <:stone2:544706153272180737>`x15456` <:Metal_icon:544706407719501836>`x9875` <:ar:544706737194795009>`x2`"
+        value: "<:wood:544704700935831558> `x20000`  <:stone:544706153272180737> `x15456`  <:Metal:544706407719501836> `x9875`  <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
 
     },
      ],
