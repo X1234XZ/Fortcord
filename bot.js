@@ -85,6 +85,48 @@ client.on('message', message => {
 });
         
         
+    }if (msg === prefix + 'inv'){
+        let user = message.mentions.users.first() || message.author;
+        message.channel.send({embed: {
+    color: 3447003,
+    author: {
+        
+      name: user.username,
+      icon_url: user.avatarURL
+    },
+    
+    fields: [{
+        name: "Profile",
+        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass"
+
+    },
+     ],
+            
+   
+    
+        }
+});
+        
+ message.channel.send({embed: {
+    color: 3447003,
+    author: {
+        
+    },
+    
+    fields: [{
+        name: "Tools and ressources ",
+        value: " \n **Ressources** \n <:wood:544704700935831558> `x20000`  <:stone:544706153272180737> `x15456`  <:Metal:544706407719501836> `x9875` \n \n **Tools** \n <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
+       
+
+    },
+     ],
+            
+   
+    
+        }
+});
+        
+        
     }
 
     
