@@ -1,16 +1,6 @@
 const Discord = require('discord.js');
 var auth = require('./config.json');
 const client = new Discord.Client();
-client.on("ready", () => {
-    client.user.setPresence({
-        game: { 
-            name: 'Fortcord',
-            type: 'Playing Fortcord on ???? servers'
-        },
-        status: 'idle'
-    })
-})
-
 
 
 client.on('ready', () => {
