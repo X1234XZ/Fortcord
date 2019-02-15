@@ -146,7 +146,7 @@ client.on('message', message => {
  
 if (msg === prefix + 'botinfo'){
 
-message.channel.sendlet user = message.mentions.users.first() || message.author;
+let user = message.mentions.users.first() || message.author;
         message.channel.send({embed: {
     color: 3447003,
     
