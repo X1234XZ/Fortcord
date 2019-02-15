@@ -21,13 +21,13 @@ client.on('message', message => {
 
     if (msg === prefix + 'donate') {
 
-        message.channel.send(" " + message.author.toString() + "»You want to donate? No problem, go on this link and buy the pack you want! \n https://donatebot.io/checkout/539435332198858753 \n Enjoy! \n ***Contact me if there is any problems.**");
+        message.channel.send(" " + message.author.toString() + "»You want to donate? No problem, go on this link and buy the pack you want! \n https://donatebot.io/checkout/546084751438512128 \n Enjoy! \n ***Contact me if there is any problems.**");
 
     }
 
     if (msg === prefix + 'server') {
 
-        message.channel.send(" " + message.author.toString() + "**» Come and join the support server!!!** \n You can also chat with others. https://discord.gg/rpbXdAX");
+        message.channel.send(" " + message.author.toString() + "**» Come and join the support server!!!** \n You can also chat with others. https://discord.gg/DjPn58");
 
     }
 
