@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
 var auth = require('./config.json');
 const client = new Discord.Client();
-client.user.setGame("Playing Fortcord with **everyone**!!!"); 
+
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setActivity("Playing Fortcord with **EVERYONE**"); 
 });
 
 client.on('message', message => {
