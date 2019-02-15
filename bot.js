@@ -142,6 +142,28 @@ client.on('message', message => {
  
  }
     
+    
+ 
+if (msg === prefix + 'botinfo'){
+
+message.channel.sendlet user = message.mentions.users.first() || message.author;
+        message.channel.send({embed: {
+    color: 3447003,
+    
+    fields: [{
+        name: "Information about the bot",
+        value: "**Created**: 16 January 2019   **Added to Discordbots**: February 14 2019   **Owner**: user.username \n **Bot status**: online   **Website**: Visit http://fortcord.com"
+
+    },
+     ],
+
+    
+        }
+});    
+}
+    
+    
+    
 })
 
 
