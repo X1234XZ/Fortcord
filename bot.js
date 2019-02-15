@@ -152,7 +152,7 @@ let user = message.mentions.users.first() || message.author;
     
     fields: [{
         name: "Information about the bot",
-        value: "<br>**Created**: `16 January 2019`</br>   <br>**Added to Discordbots**: `February 14 2019`</br>   **Owner**: `!!![Hello1234]!!!`\n **Bot status**: `online`   **Website**: Visit http://fortcord.com"
+        value: "**Created**: `16 January 2019`   **Added to Discordbots**: `February 14 2019`   **Owner**: `!!![Hello1234]!!!`\n **Bot status**: `online`   **Website**: Visit http://fortcord.com"
 
     },
      ],
