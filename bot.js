@@ -5,7 +5,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity("Playing Fortcord with everyone"); 
+    client.user.setActivity("Fortcord with everyone"); 
 });
 
 client.on('message', message => {
@@ -152,7 +152,7 @@ let user = message.mentions.users.first() || message.author;
     
     fields: [{
         name: "Information about the bot",
-        value: "**Created**: `16 January 2019`   **Added to Discordbots**: `February 14 2019`   **Owner**: `!!![Hello1234]!!!`\n **Bot status**: `online`   **Website**: Visit http://fortcord.com"
+        value: "**Created**: `16 January 2019`   **Added to Discordbots**: `February 14 2019`  \n **Owner**: `!!![Hello1234]!!!` **Bot status**: `online` \n **Website**: Visit http://fortcord.com"
 
     },
      ],
