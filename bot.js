@@ -62,8 +62,8 @@ client.on('message', message => {
     if (msg === prefix + 'profile') {
         let user = message.mentions.users.first() || message.author;
         profile = client.getProfile.get(user.username);
-        if (!score) {
-            score = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0 }
+        if (!profile) {
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0 }
             client.setProfile.run(profile);
         }
         message.channel.send({
