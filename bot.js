@@ -9,7 +9,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity("Typing f!help");
     client.getProfile = sql.prepare("SELECT * FROM profile WHERE username = ?");
-    client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance);");
+    client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance, level) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance, @level);");
 });
 
 client.on('message', message => {
@@ -63,7 +63,7 @@ client.on('message', message => {
         let user = message.mentions.users.first() || message.author;
         profile = client.getProfile.get(user.username);
         if (!profile) {
-            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0 }
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0, level: 1 }
             client.setProfile.run(profile);
         }
         message.channel.send({
@@ -77,7 +77,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 1 \n **Experience:** 0/100 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
+                    value: "**Level:** "+profile.level+" \n **Experience:** 0/100 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
 
                 }, ],
 
@@ -111,7 +111,7 @@ client.on('message', message => {
         let user = message.mentions.users.first() || message.author;
          profile = client.getProfile.get(user.username);
         if (!profile) {
-            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0 }
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, level: 1 }
             client.setProfile.run(profile);
         }
         message.channel.send({
@@ -125,7 +125,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 1 \n **Experience:** 0/100 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
+                    value: "**Level:** "+profile.level+" \n **Experience:** 0/100 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
 
                 }, ],
 
@@ -162,12 +162,13 @@ client.on('message', message => {
         let user = message.mentions.users.first() || message.author;
         profile = client.getProfile.get(user.username);
          if (!profile) {
-            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0 }
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0, level: 1 }
             client.setProfile.run(profile);
         }
         profile.wood = profile.wood+45; 
         profile.stone = profile.stone+35
         profile.metal = profile.metal+5
+        profile.level = profile.level+20
         client.setProfile.run(profile);
         
         message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>[Pulse axe]")
@@ -179,12 +180,13 @@ client.on('message', message => {
          let user = message.mentions.users.first() || message.author;
         profile = client.getProfile.get(user.username);
          if (!profile) {
-            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0 }
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0, level: 1 }
             client.setProfile.run(profile);
         }
         profile.wood = profile.wood+45; 
         profile.stone = profile.stone+35
         profile.metal = profile.metal+5
+        profile.level = profile.level+20
         client.setProfile.run(profile);
 
         message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>[pulse axe]")
