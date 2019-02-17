@@ -159,6 +159,7 @@ client.on('message', message => {
 
     if (msg === prefix + 'break') {
         
+        let user = message.mentions.users.first() || message.author;
         profile = client.getProfile.get(user.username);
          if (!profile) {
             profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0 }
