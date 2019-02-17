@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 var auth = require('./config.json');
 const client = new Discord.Client();
 const SQLite = require("better-sqlite3");
-const sql = new SQLite('./db/fortcord.db');
+const sql = new SQLite('../db/fortcord.db');
 
 
 client.on('ready', () => {
@@ -95,8 +95,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Tools and ressources ",
-                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x"+profile.stone+"`  <:Metal:544706407719501836> `x"+profile.metal+"` \n \n **Tools** \n <:pulse_axe:546816166056689682>[Pulse axe]
-`x1`"
+                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x"+profile.stone+"`  <:Metal:544706407719501836> `x"+profile.metal+"` \n \n **Tools** \n <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
 
 
                 }, ],
