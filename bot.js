@@ -77,7 +77,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 1 \n **Experience:** "profile.experience" \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
+                    value: "**Level:** 1 \n **Experience:** "+profile.experience+" \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
 
                 }, ],
 
