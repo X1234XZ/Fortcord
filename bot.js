@@ -77,7 +77,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 1 \n **Experience:** 0/100 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>"
+                    value: "**Level:** 1 \n **Experience:** 0/100 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
 
                 }, ],
 
@@ -95,7 +95,8 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Tools and ressources ",
-                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x"+profile.stone+"`  <:Metal:544706407719501836> `x"+profile.metal+"` \n \n **Tools** \n <:marshy_smasher:546517860294459392>`x1`"
+                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x"+profile.stone+"`  <:Metal:544706407719501836> `x"+profile.metal+"` \n \n **Tools** \n <:pulse_axe:546816166056689682>[Pulse axe]
+`x1`"
 
 
                 }, ],
@@ -125,7 +126,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 1 \n **Experience:** 0/100 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>"
+                    value: "**Level:** 1 \n **Experience:** 0/100 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** 0/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
 
                 }, ],
 
@@ -143,7 +144,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Tools and ressources ",
-                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x"+profile.stone+"`  <:Metal:544706407719501836> `x"+profile.metal+"` \n \n **Tools** \n <:pulse_axe:546816166056689682>`x1`"
+                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x"+profile.stone+"`  <:Metal:544706407719501836> `x"+profile.metal+"` \n \n **Tools** \n <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
 
 
                 }, ],
@@ -170,7 +171,7 @@ client.on('message', message => {
         profile.metal = profile.metal+5
         client.setProfile.run(profile);
         
-        message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>")
+        message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>[Pulse axe]")
 
     }
 
@@ -187,7 +188,7 @@ client.on('message', message => {
         profile.metal = profile.metal+5
         client.setProfile.run(profile);
 
-        message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>")
+        message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>[pulse axe]")
 
     }
 
