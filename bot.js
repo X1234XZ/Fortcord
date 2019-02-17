@@ -173,6 +173,15 @@ client.on('message', message => {
     }
 
     if (msg === prefix + 'b') {
+        
+         let user = message.mentions.users.first() || message.author;
+        profile = client.getProfile.get(user.username);
+         if (!profile) {
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0 }
+            client.setProfile.run(profile);
+        }
+        profile.wood = profile.wood+30;  
+        client.setProfile.run(profile);
 
         message.channel.send(" " + message.author.toString() + "» You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737>,  and `10` <:Metal:544706407719501836> with your <:marshy_smasher:546517860294459392>")
 
