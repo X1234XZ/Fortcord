@@ -109,6 +109,11 @@ client.on('message', message => {
     }
     if (msg === prefix + 'inv') {
         let user = message.mentions.users.first() || message.author;
+         profile = client.getProfile.get(user.username);
+        if (!profile) {
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0 }
+            client.setProfile.run(profile);
+        }
         message.channel.send({
             embed: {
                 color: 3447003,
@@ -138,7 +143,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Tools and ressources ",
-                    value: " \n **Ressources** \n <:wood:544704700935831558> `x20000`  <:stone:544706153272180737> `x15456`  <:Metal:544706407719501836> `x9875` \n \n **Tools** \n  <:marshy_smasher:546517860294459392> `x1` <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
+                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x"+profile.stone+"`  <:Metal:544706407719501836> `x"+profile.metal+"` \n \n **Tools** \n <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
 
 
                 }, ],
