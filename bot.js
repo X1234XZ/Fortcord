@@ -27,7 +27,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Help",
-                    value: "Want to learn about commands? Need help? Visit http://fortcord.com/index.php/commands/ \n ***This site is incomplete.** \n \n Plus, you can discover the whole website with all info about the bot!!! \n If you have any questions, contact me by mail using **xxgamerxx.ca@gmail.com** or on discord using \n **!!![Hello1234]!!!#1466**. \n \n *If you want to donate type* `f!donate` *and it will give you the donate link.* \n *If you don't have a profile, type* `f!start` *to gain your profile*"
+                    value: "Want to learn about commands? Need help? Visit http://fortcord.com/index.php/commands/ \n ***This site is incomplete.** \n \n Plus, you can discover the whole website with all info about the bot!!! \n If you have any questions, contact me by mail using **xxgamerxx.ca@gmail.com** or on discord using \n **!!![Hello1234]!!!#1466**. \n \n *If you want to donate type* `f!donate` *and it will give you the donate link.* \n *If you don't have a profile, type* `f!profile` *to gain your profile*"
 
                 }, ],
 
@@ -158,7 +158,15 @@ client.on('message', message => {
 
 
     if (msg === prefix + 'break') {
-
+        
+        profile = client.getProfile.get(user.username);
+         if (!profile) {
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0 }
+            client.setProfile.run(profile);
+        }
+        profile.wood = profile.wood+30;  
+        client.setProfile.run(profile);
+        
         message.channel.send(" " + message.author.toString() + "» You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737>,  and `10` <:Metal:544706407719501836> with your <:marshy_smasher:546517860294459392>")
 
     }
