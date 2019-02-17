@@ -9,7 +9,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity("Fortcord with everyone");
     client.getProfile = sql.prepare("SELECT * FROM profile WHERE username = ?");
-    client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold) VALUES (@id, @username, @wood, @stone, @metal, @gold);");
+    client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance);");
 });
 
 client.on('message', message => {
@@ -63,7 +63,7 @@ client.on('message', message => {
         let user = message.mentions.users.first() || message.author;
         profile = client.getProfile.get(user.username);
         if (!profile) {
-            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0 }
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0 }
             client.setProfile.run(profile);
         }
         message.channel.send({
@@ -77,7 +77,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:marshy_smasher:546517860294459392>"
+                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:marshy_smasher:546517860294459392>"
 
                 }, ],
 
@@ -125,7 +125,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:marshy_smasher:546517860294459392>"
+                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:marshy_smasher:546517860294459392>"
 
                 }, ],
 
