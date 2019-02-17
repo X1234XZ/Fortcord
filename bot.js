@@ -77,7 +77,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:marshy_smasher:546517860294459392>"
+                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>"
 
                 }, ],
 
@@ -125,7 +125,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:marshy_smasher:546517860294459392>"
+                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>"
 
                 }, ],
 
@@ -143,7 +143,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Tools and ressources ",
-                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x"+profile.stone+"`  <:Metal:544706407719501836> `x"+profile.metal+"` \n \n **Tools** \n <:marshy_smasher:546517860294459392>`x1`"
+                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x"+profile.stone+"`  <:Metal:544706407719501836> `x"+profile.metal+"` \n \n **Tools** \n <:pulse_axe:546816166056689682>`x1`"
 
 
                 }, ],
@@ -165,10 +165,12 @@ client.on('message', message => {
             profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0 }
             client.setProfile.run(profile);
         }
-        profile.wood = profile.wood+30;  
+        profile.wood = profile.wood+45; 
+        profile.stone = profile.stone+35
+        profile.metal = profile.metal+5
         client.setProfile.run(profile);
         
-        message.channel.send(" " + message.author.toString() + "» You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737>,  and `10` <:Metal:544706407719501836> with your <:marshy_smasher:546517860294459392>")
+        message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>")
 
     }
 
@@ -180,10 +182,12 @@ client.on('message', message => {
             profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0 }
             client.setProfile.run(profile);
         }
-        profile.wood = profile.wood+30;  
+        profile.wood = profile.wood+45; 
+        profile.stone = profile.stone+35
+        profile.metal = profile.metal+5
         client.setProfile.run(profile);
 
-        message.channel.send(" " + message.author.toString() + "» You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737>,  and `10` <:Metal:544706407719501836> with your <:marshy_smasher:546517860294459392>")
+        message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>")
 
     }
 
