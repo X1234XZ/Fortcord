@@ -7,7 +7,7 @@ const sql = new SQLite('./db/fortcord.db');
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity("Fortcord with everyone");
+    client.user.setActivity("Typing f!help");
     client.getProfile = sql.prepare("SELECT * FROM profile WHERE username = ?");
     client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance);");
 });
@@ -27,7 +27,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Help",
-                    value: "Want to learn about commands? Need help? Visit http://fortcord.com/index.php/commands/ \n ***This site is incomplete.** \n \n Plus, you can discover the whole website with all info about the bot!!! \n If you have any questions, contact me by mail using **xxgamerxx.ca@gmail.com** or on discord using \n **!!![Hello1234]!!!#1466**. \n \n *If you want to donate tap* `f!donate` *and it will give you the donate link.*"
+                    value: "Want to learn about commands? Need help? Visit http://fortcord.com/index.php/commands/ \n ***This site is incomplete.** \n \n Plus, you can discover the whole website with all info about the bot!!! \n If you have any questions, contact me by mail using **xxgamerxx.ca@gmail.com** or on discord using \n **!!![Hello1234]!!!#1466**. \n \n *If you want to donate type* `f!donate` *and it will give you the donate link.* \n *If you don't have a profile, type* `f!start` *to gain your profile*"
 
                 }, ],
 
