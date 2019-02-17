@@ -1,11 +1,15 @@
 const Discord = require('discord.js');
 var auth = require('./config.json');
 const client = new Discord.Client();
+const SQLite = require("better-sqlite3");
+const sql = new SQLite('./db/fortcord.db');
 
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity("Fortcord with everyone"); 
+    client.user.setActivity("Fortcord with everyone");
+    client.getProfile = sql.prepare("SELECT * FROM profile WHERE username");
+    client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold) VALUES (@id, @username, @wood, @stone, @metal, @gold);");
 });
 
 client.on('message', message => {
@@ -14,23 +18,23 @@ client.on('message', message => {
 
 
 
-    if (msg === prefix + 'help'){
+    if (msg === prefix + 'help') {
 
-let user = message.mentions.users.first() || message.author;
-        message.channel.send({embed: {
-    color: 3447003,
-    
-    fields: [{
-        name: "Help",
-        value: "Want to learn about commands? Need help? Visit http://fortcord.com/index.php/commands/ \n ***This site is incomplete.** \n \n Plus, you can discover the whole website with all info about the bot!!! \n If you have any questions, contact me by mail using **xxgamerxx.ca@gmail.com** or on discord using \n **!!![Hello1234]!!!#1466**. \n \n *If you want to donate tap* `f!donate` *and it will give you the donate link.*"
+        let user = message.mentions.users.first() || message.author;
+        message.channel.send({
+            embed: {
+                color: 3447003,
 
-    },
-     ],
+                fields: [{
+                    name: "Help",
+                    value: "Want to learn about commands? Need help? Visit http://fortcord.com/index.php/commands/ \n ***This site is incomplete.** \n \n Plus, you can discover the whole website with all info about the bot!!! \n If you have any questions, contact me by mail using **xxgamerxx.ca@gmail.com** or on discord using \n **!!![Hello1234]!!!#1466**. \n \n *If you want to donate tap* `f!donate` *and it will give you the donate link.*"
 
-    
-        }
-});    
-}
+                }, ],
+
+
+            }
+        });
+    }
 
     if (msg === prefix + 'donate') {
 
@@ -54,128 +58,134 @@ let user = message.mentions.users.first() || message.author;
 
         message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is currently unavailable. \n **Please wait patiently, thank you!**");
     }
-    
-    if (msg === prefix + 'profile'){
+
+    if (msg === prefix + 'profile') {
         let user = message.mentions.users.first() || message.author;
-        message.channel.send({embed: {
-    color: 3447003,
-    author: {
-        
-      name: user.username,
-      icon_url: user.avatarURL
-    },
-    
-    fields: [{
-        name: "Profile",
-        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:frozen_pickaxe:544877199010824192>"
-
-    },
-     ],
-            
-   
-    
+        profile = client.getProfile.get(user.username);
+        if (!score) {
+            score = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0 }
+            client.setProfile.run(profile);
         }
-});
-        
- message.channel.send({embed: {
-    color: 3447003,
-    author: {
-        
-    },
-    
-    fields: [{
-        name: "Tools and ressources ",
-        value: " \n **Ressources** \n <:wood:544704700935831558> `x20000`  <:stone:544706153272180737> `x15456`  <:Metal:544706407719501836> `x9875` \n \n **Tools** \n <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
-       
+        message.channel.send({
+            embed: {
+                color: 3447003,
+                author: {
 
-    },
-     ],
-            
-   
-    
-        }
-});
-        
-        
-    }if (msg === prefix + 'inv'){
-        let user = message.mentions.users.first() || message.author;
-        message.channel.send({embed: {
-    color: 3447003,
-    author: {
-        
-      name: user.username,
-      icon_url: user.avatarURL
-    },
-    
-    fields: [{
-        name: "Profile",
-        value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:frozen_pickaxe:544877199010824192>"
+                    name: user.username,
+                    icon_url: user.avatarURL
+                },
 
-    },
-     ],
-            
-   
-    
-        }
-});
-        
- message.channel.send({embed: {
-    color: 3447003,
-    author: {
-        
-    },
-    
-    fields: [{
-        name: "Tools and ressources ",
-        value: " \n **Ressources** \n <:wood:544704700935831558> `x20000`  <:stone:544706153272180737> `x15456`  <:Metal:544706407719501836> `x9875` \n \n **Tools** \n  <:frozen_pickaxe:544877199010824192> `x1` <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
-       
+                fields: [{
+                    name: "Profile",
+                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:marshy_smasher:546517860294459392>"
 
-    },
-     ],
-            
-   
-    
-        }
-});
-        
-        
+                }, ],
+
+
+
+            }
+        });
+
+        message.channel.send({
+            embed: {
+                color: 3447003,
+                author: {
+
+                },
+
+                fields: [{
+                    name: "Tools and ressources ",
+                    value: " \n **Ressources** \n <:wood:544704700935831558> `x"+profile.wood+"`  <:stone:544706153272180737> `x15456`  <:Metal:544706407719501836> `x9875` \n \n **Tools** \n <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
+
+
+                }, ],
+
+
+
+            }
+        });
+
+
     }
-    
-    
- if (msg === prefix + 'break'){
- 
- message.channel.send(" " + message.author.toString() + "» You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737>,  and `10` <:Metal:544706407719501836> with your <:frozen_pickaxe:544877199010824192>")
- 
- }
-    
- if (msg === prefix + 'b'){
- 
- message.channel.send(" " + message.author.toString() + "» You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737>,  and `10` <:Metal:544706407719501836> with your <:fortnite:544877199010824192>")
- 
- }
-    
-    
- 
-if (msg === prefix + 'botinfo'){
+    if (msg === prefix + 'inv') {
+        let user = message.mentions.users.first() || message.author;
+        message.channel.send({
+            embed: {
+                color: 3447003,
+                author: {
 
-let user = message.mentions.users.first() || message.author;
-        message.channel.send({embed: {
-    color: 3447003,
-    
-    fields: [{
-        name: "Information about the bot",
-        value: "**Created**: `16 January 2019`   **Added to Discordbots**: `February 14 2019`  \n **Owner**: `!!![Hello1234]!!!` **Bot status**: `online` \n **Website**: Visit http://fortcord.com"
+                    name: user.username,
+                    icon_url: user.avatarURL
+                },
 
-    },
-     ],
+                fields: [{
+                    name: "Profile",
+                    value: "**Level:** 20 \n **Experience:** 2697/3000 \n **Lobby:** None \n **Tier:** 14 \n **Tier XP:** 3/10 \n **Balance:** 328755 <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:marshy_smasher:546517860294459392>"
 
-    
-        }
-});    
-}
-    
-    
-    
+                }, ],
+
+
+
+            }
+        });
+
+        message.channel.send({
+            embed: {
+                color: 3447003,
+                author: {
+
+                },
+
+                fields: [{
+                    name: "Tools and ressources ",
+                    value: " \n **Ressources** \n <:wood:544704700935831558> `x20000`  <:stone:544706153272180737> `x15456`  <:Metal:544706407719501836> `x9875` \n \n **Tools** \n  <:marshy_smasher:546517860294459392> `x1` <:assaultrifle:544706737194795009> `x2`  <:compactsmg:544708571904868352> `x1`"
+
+
+                }, ],
+
+
+
+            }
+        });
+
+
+    }
+
+
+    if (msg === prefix + 'break') {
+
+        message.channel.send(" " + message.author.toString() + "» You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737>,  and `10` <:Metal:544706407719501836> with your <:marshy_smasher:546517860294459392>")
+
+    }
+
+    if (msg === prefix + 'b') {
+
+        message.channel.send(" " + message.author.toString() + "» You broke `30` <:wood:544704700935831558>, `40` <:stone:544706153272180737>,  and `10` <:Metal:544706407719501836> with your <:marshy_smasher:546517860294459392>")
+
+    }
+
+
+
+    if (msg === prefix + 'botinfo') {
+
+        let user = message.mentions.users.first() || message.author;
+        message.channel.send({
+            embed: {
+                color: 3447003,
+
+                fields: [{
+                    name: "Information about the bot",
+                    value: "**Created**: `16 January 2019`   **Added to Discordbots**: `February 14 2019`  \n **Owner**: `!!![Hello1234]!!!` **Bot status**: `online` \n **Website**: Visit http://fortcord.com"
+
+                }, ],
+
+
+            }
+        });
+    }
+
+
+
 })
 
 
