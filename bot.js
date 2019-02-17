@@ -166,10 +166,10 @@ client.on('message', message => {
             client.setProfile.run(profile);
         }
         profile.wood = profile.wood+45; 
-        profile.stone = profile.stone+35
-        profile.metal = profile.metal+5
-        profile.experience = profile.experience+1
-        profile.tierxp = profile.tierxp+0.20
+        profile.stone = profile.stone+35;
+        profile.metal = profile.metal+5;
+        profile.experience = profile.experience+1;
+        profile.tierxp = profile.tierxp+0.20;
         client.setProfile.run(profile);
         
         message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>[Pulse axe]")
@@ -185,16 +185,18 @@ client.on('message', message => {
             client.setProfile.run(profile);
         }
         profile.wood = profile.wood+45; 
-        profile.stone = profile.stone+35
-        profile.metal = profile.metal+5
-        profile.experience = profile.experience+1
-        profile.tierxp = profile.tierxp+0.20
+        profile.stone = profile.stone+35;
+        profile.metal = profile.metal+5;
+        profile.experience = profile.experience+1;
+        if (profile.experience >=1000 ){
+        
+        }
+        profile.tierxp = profile.tierxp+0.20;
         client.setProfile.run(profile);
 
         message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>[pulse axe]")
 
     }
-
 
 
     if (msg === prefix + 'botinfo') {
