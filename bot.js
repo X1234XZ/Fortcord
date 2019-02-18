@@ -7,7 +7,7 @@ const sql = new SQLite('../db/fortcord.db');
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Fortcord on ${scount} servers.");
+  client.user.setActivity(`Fortcord on ${scount} servers.`);
   client.getProfile = sql.prepare("SELECT * FROM profile WHERE username = ?");
   client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance, experience, tierxp, level) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance, @experience, @tierxp, @level);");
 });
