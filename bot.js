@@ -172,7 +172,7 @@ client.on('message', message => {
         if (profile.experience >=1000 ){
           profile.level = profile.level+5;
           profile.experience = profile.experience-1000
-          message.channel.send(" " + message.author.toString() + "» GG, You just advance to "+profile.level+"")
+          message.channel.send(" " + message.author.toString() + "» GG, You just advance to **level** "+profile.level+"")
         }
         profile.tierxp = profile.tierxp+2;
         client.setProfile.run(profile);
@@ -196,7 +196,7 @@ client.on('message', message => {
         if (profile.experience >=1000 ){
           profile.level = profile.level+5;
           profile.experience = profile.experience-1000
-          message.channel.send(" " + message.author.toString() + "» GG, You just advance to "+profile.level+"")
+          message.channel.send(" " + message.author.toString() + "» GG, You just advance to **level** "+profile.level+"")
         }
         profile.tierxp = profile.tierxp+2;
         client.setProfile.run(profile);
