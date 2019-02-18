@@ -77,7 +77,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 1 \n **Experience:** "+profile.experience+"/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** "+profile.tierxp+"/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
+                    value: "**Level:** 1 \n **Experience:** "+profile.experience+"/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** "+profile.tierxp+"/2000 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
 
                 }, ],
 
@@ -125,7 +125,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 1 \n **Experience:** "+profile.experience+"/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** "+profile.tierxp+"/10 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
+                    value: "**Level:** 1 \n **Experience:** "+profile.experience+"/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** "+profile.tierxp+"/2000 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
 
                 }, ],
 
@@ -169,7 +169,7 @@ client.on('message', message => {
         profile.stone = profile.stone+35;
         profile.metal = profile.metal+5;
         profile.experience = profile.experience+1;
-        profile.tierxp = profile.tierxp+0.20;
+        profile.tierxp = profile.tierxp+1;
         client.setProfile.run(profile);
         
         message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>[Pulse axe]")
@@ -191,7 +191,7 @@ client.on('message', message => {
         if (profile.experience >=1000 ){
         
         }
-        profile.tierxp = profile.tierxp+0.20;
+        profile.tierxp = profile.tierxp+1;
         client.setProfile.run(profile);
 
         message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>[pulse axe]")
