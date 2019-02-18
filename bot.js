@@ -270,7 +270,7 @@ client.on('message', message => {
     var scount = client.guilds.size
     var usercount = client.users.size
 
-    message.channel.send(`${client.user.username} is on ${scount} servers with ${usercount} members!`)
+    message.channel.send(`${client.user.username} is on **${scount}** servers with **${usercount}** members!`)
 
   }
 
