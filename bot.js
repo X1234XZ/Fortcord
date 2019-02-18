@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 var auth = require('./config.json');
 const client = new Discord.Client();
-const talkedRecently = new Set();
 const SQLite = require("better-sqlite3");
 const sql = new SQLite('../db/fortcord.db');
 
@@ -230,20 +229,6 @@ client.on('message', message => {
         tierxp: 0
       }
       client.setProfile.run(profile);
-    }
-    
-if (talkedRecently.has(msg.author.id)) {
-            msg.channel.send("Wait 1 minute before getting typing this again. - " + msg.author);
-    } else {
-
-           // the user can type the command ... your command code goes here :)
-
-        // Adds the user to the set so that they can't talk for a minute
-        talkedRecently.add(msg.author.id);
-        setTimeout(() => {
-          // Removes the user from the set after a minute
-          talkedRecently.delete(msg.author.id);
-        }, 60000);
     }
     profile.wood = profile.wood + 45;
     profile.stone = profile.stone + 35;
