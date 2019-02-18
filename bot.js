@@ -224,19 +224,20 @@ client.on('message', message => {
         });
     }
     
-    
     if (msg === prefix + 'servercount'){
     
         var scount = client.guilds.size
         var usercount = client.users.size
         
-        message.channel.send(`${client.user.username} is on ${scount} servers with ${usercount} members!`)
+       message.channel.send(`${client.user.username} is on ${scount} servers with ${usercount} members!`)
     
-    }
-
-
+   }
 
 })
+
+
+
+
 
 
 client.login(auth.token);
