@@ -172,6 +172,7 @@ client.on('message', message => {
         if (profile.experience >=1000 ){
           profile.level = profile.level+1;
           profile.experience = profile.experience-1000
+          message.channel.send(" " + message.author.toString() + "» GG, You just advance to "+profile.level+"")
         }
         profile.tierxp = profile.tierxp+1;
         client.setProfile.run(profile);
