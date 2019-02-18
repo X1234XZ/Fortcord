@@ -9,7 +9,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity("Typing f!help");
     client.getProfile = sql.prepare("SELECT * FROM profile WHERE username = ?");
-    client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance, experience, tierxp) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance, @experience, @tierxp);");
+    client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance, experience, tierxp, level) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance, @experience, @tierxp, @level);");
 });
 
 client.on('message', message => {
@@ -169,6 +169,10 @@ client.on('message', message => {
         profile.stone = profile.stone+35;
         profile.metal = profile.metal+5;
         profile.experience = profile.experience+1;
+        if (profile.experience >=1000 ){
+          profile.level = profile.level+1;
+          profile.experience = profile.experience-1000
+        }
         profile.tierxp = profile.tierxp+1;
         client.setProfile.run(profile);
         
@@ -189,7 +193,8 @@ client.on('message', message => {
         profile.metal = profile.metal+5;
         profile.experience = profile.experience+1;
         if (profile.experience >=1000 ){
-        
+          profile.level = profile.level+1;
+          profile.experience = profile.experience-1000
         }
         profile.tierxp = profile.tierxp+1;
         client.setProfile.run(profile);
