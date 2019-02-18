@@ -63,7 +63,7 @@ client.on('message', message => {
         let user = message.mentions.users.first() || message.author;
         profile = client.getProfile.get(user.username);
         if (!profile) {
-            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0, experience: 0, tierxp: 0 }
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, balance: 0, experience: 0, tierxp: 0, level: 1 }
             client.setProfile.run(profile);
         }
         message.channel.send({
@@ -77,7 +77,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 1 \n **Experience:** "+profile.experience+"/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** "+profile.tierxp+"/2000 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
+                    value: "**Level:** "+profile.level+" \n **Experience:** "+profile.experience+"/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** "+profile.tierxp+"/2000 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
 
                 }, ],
 
@@ -111,7 +111,7 @@ client.on('message', message => {
         let user = message.mentions.users.first() || message.author;
          profile = client.getProfile.get(user.username);
         if (!profile) {
-            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, experience: 0, tierxp: 0 }
+            profile = { id: null, username: user.username, wood: 0, stone: 0, metal: 0, gold: 0, experience: 0, tierxp: 0, level: 1 }
             client.setProfile.run(profile);
         }
         message.channel.send({
@@ -125,7 +125,7 @@ client.on('message', message => {
 
                 fields: [{
                     name: "Profile",
-                    value: "**Level:** 1 \n **Experience:** "+profile.experience+"/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** "+profile.tierxp+"/2000 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
+                    value: "**Level:** "+profile.level+" \n **Experience:** "+profile.experience+"/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** "+profile.tierxp+"/2000 \n **Balance:** "+profile.balance+" <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
 
                 }, ],
 
