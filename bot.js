@@ -273,6 +273,27 @@ client.on('message', message => {
     message.channel.send(`${client.user.username} is on **${scount}** servers with **${usercount}** members!`)
 
   }
+  
+  
+  if (msg === prefix + 'shop') {
+
+    let user = message.mentions.users.first() || message.author;
+    message.channel.send({
+      embed: {
+        color: 3447003,
+
+        fields: [{
+          name: "Shop",
+          value: "**Select the category by typing `f!shop <category>` \n `Potions`\n `Healing items`\n `Pickaxe` \n `Guns`\n `Ammo`"
+
+        }, ],
+
+
+      }
+    });
+  }
+
+  
 
 })
 
