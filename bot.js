@@ -284,7 +284,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Shop",
-          value: "**Select the category by typing `f!shop <category>` \n `Potions`\n `Healing items`\n `Pickaxe` \n `Guns`\n `Ammo`"
+          value: "**Select the category by typing** `f!shop <category>` \n \n `Potions`\n `Healing items`\n `Pickaxe` \n `Guns`\n `Ammo`"
 
         }, ],
 
