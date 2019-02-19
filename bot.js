@@ -44,7 +44,7 @@ client.on('message', message => {
 
   if (msg === prefix + 'server') {
 
-    message.channel.send(" " + message.author.toString() + "**» Come and join the support server!!!** \n You can also chat with others. https://discord.gg/DjPn58");
+    message.channel.send(" " + message.author.toString() + "**» Come and join the support server!!!** \n You can also chat with others. https://discord.gg/5AeSyeZ");
 
   }
 
