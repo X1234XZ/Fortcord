@@ -15,6 +15,7 @@ const helloProfile = {
         balance: 0,
         experience: 0,
         tierxp: 0,
+        tier: 1,
         level: 1
       }
 
@@ -83,6 +84,7 @@ client.on('message', message => {
     }
           
           var maxXp=100 + (profile.level - 1) * 75;
+          var maxTier=500 + (profile.tier - 1) * 50;
           
     message.channel.send({
       embed: {
@@ -95,7 +97,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Profile",
-          value: "**Level:** " + profile.level + " \n **Experience:** " + profile.experience + "/"+maxXp+" \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** " + profile.tierxp + "/2000 \n **Balance:** " + profile.balance + " <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
+          value: "**Level:** " + profile.level + " \n **Experience:** " + profile.experience + "/"+maxXp+" \n **Lobby:** None \n **Tier:** "+profile.tier+" \n **Tier XP:** " + profile.tierxp + "/2000 \n **Balance:** " + profile.balance + " <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
 
         }, ],
 
@@ -139,6 +141,7 @@ client.on('message', message => {
     }
           
           var maxXp=100 + (profile.level - 1) * 75;
+          var maxTier=500 + (profile.tier - 1) * 50;
           
     profile.wood = profile.wood+45;
     profile.stone = profile.stone+35;
@@ -150,6 +153,10 @@ client.on('message', message => {
       message.channel.send(" " + message.author.toString() + "» GG, You just advance to **level** " + profile.level + "")
     }
     profile.tierxp = profile.tierxp+2;
+    if (profile.tierxp >= maxTier) {
+    profile.tier = profile.tier+1
+    profile.tierxp = profile.tierxp-maxTier
+    }
     client.setProfile.run(profile);
 
     message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>`[Pulse axe]`")
