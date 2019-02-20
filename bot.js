@@ -59,7 +59,7 @@ client.on('message', message => {
     message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is currently unavailable. \n **Please wait patiently, thank you!**");
   }
 
-  if (msg === prefix + 'profile') {
+  if (msg === prefix + 'profile'|| msg === prefix + 'inv') {
     let user = message.mentions.users.first() || message.author;
     profile = client.getProfile.get(user.username);
     if (!profile) {
@@ -118,67 +118,10 @@ client.on('message', message => {
 
 
   }
-  if (msg === prefix + 'inv') {
-    let user = message.mentions.users.first() || message.author;
-    profile = client.getProfile.get(user.username);
-    if (!profile) {
-      profile = {
-        id: null,
-        username: user.username,
-        wood: 0,
-        stone: 0,
-        metal: 0,
-        gold: 0,
-        experience: 0,
-        tierxp: 0,
-        level: 1
-      }
-      client.setProfile.run(profile);
-    }
-    message.channel.send({
-      embed: {
-        color: 3447003,
-        author: {
-
-          name: user.username,
-          icon_url: user.avatarURL
-        },
-
-        fields: [{
-          name: "Profile",
-          value: "**Level:** " + profile.level + " \n **Experience:** " + profile.experience + "/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** " + profile.tierxp + "/2000 \n **Balance:** " + profile.balance + " <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]"
-
-        }, ],
+  
 
 
-
-      }
-    });
-
-    message.channel.send({
-      embed: {
-        color: 3447003,
-        author: {
-
-        },
-
-        fields: [{
-          name: "Tools and ressources ",
-          value: " \n **Ressources** \n <:wood:544704700935831558> `x" + profile.wood + "`  <:stone:544706153272180737> `x" + profile.stone + "`  <:Metal:544706407719501836> `x" + profile.metal + "` \n \n **Tools** \n <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
-
-
-        }, ],
-
-
-
-      }
-    });
-
-
-  }
-
-
-  if (msg === prefix + 'break') {
+  if (msg === prefix + 'break' || msg === prefix + 'b') {
 
     let user = message.mentions.users.first() || message.author;
     profile = client.getProfile.get(user.username);
@@ -212,39 +155,6 @@ client.on('message', message => {
 
   }
 
-  if (msg === prefix + 'b') {
-
-    let user = message.mentions.users.first() || message.author;
-    profile = client.getProfile.get(user.username);
-    if (!profile) {
-      profile = {
-        id: null,
-        username: user.username,
-        wood: 0,
-        stone: 0,
-        metal: 0,
-        gold: 0,
-        balance: 0,
-        experience: 0,
-        tierxp: 0
-      }
-      client.setProfile.run(profile);
-    }
-    profile.wood = profile.wood+45;
-    profile.stone = profile.stone+35;
-    profile.metal = profile.metal+5;
-    profile.experience = profile.experience+5;
-    if (profile.experience >= 1000) {
-      profile.level = profile.level+1;
-      profile.experience = profile.experience-1000
-      message.channel.send(" " + message.author.toString() + "» GG, You just advance to **level** " + profile.level + "")
-    }
-    profile.tierxp = profile.tierxp+2;
-    client.setProfile.run(profile);
-
-    message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>`[pulse axe]`")
-
-  }
 
 
   if (msg === prefix + 'botinfo') {
