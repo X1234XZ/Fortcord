@@ -5,6 +5,20 @@ const SQLite = require("better-sqlite3");
 const sql = new SQLite('../db/fortcord.db');
 
 
+const helloProfile = {
+        id: null,
+        username: user.username,
+        wood: 0,
+        stone: 0,
+        metal: 0,
+        gold: 0,
+        balance: 0,
+        experience: 0,
+        tierxp: 0,
+        level: 1
+      }
+
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity("Fortcord with f!help");
@@ -63,18 +77,7 @@ client.on('message', message => {
     let user = message.mentions.users.first() || message.author;
     profile = client.getProfile.get(user.username);
     if (!profile) {
-      profile = {
-        id: null,
-        username: user.username,
-        wood: 0,
-        stone: 0,
-        metal: 0,
-        gold: 0,
-        balance: 0,
-        experience: 0,
-        tierxp: 0,
-        level: 1
-      }
+      profile = helloProfile;
       client.setProfile.run(profile);
     }
     message.channel.send({
@@ -126,17 +129,7 @@ client.on('message', message => {
     let user = message.mentions.users.first() || message.author;
     profile = client.getProfile.get(user.username);
     if (!profile) {
-      profile = {
-        id: null,
-        username: user.username,
-        wood: 0,
-        stone: 0,
-        metal: 0,
-        gold: 0,
-        balance: 0,
-        experience: 0,
-        tierxp: 0
-      }
+      profile = helloProfile;
       client.setProfile.run(profile);
     }
     profile.wood = profile.wood+45;
