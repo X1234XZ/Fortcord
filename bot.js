@@ -161,7 +161,7 @@ client.on('message', message => {
     }
     client.setProfile.run(profile);
 
-    message.channel.send{
+    message.channel.send
             (" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>`[Pulse axe]`")
 
   }
