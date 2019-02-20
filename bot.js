@@ -154,7 +154,7 @@ client.on('message', message => {
     }
     profile.tierxp = profile.tierxp+2;
     if (profile.tierxp >= maxTier) {
-    profile.tier = profile.tier+1
+    profile.tier = profile.tier+1;
     profile.tierxp = profile.tierxp-maxTier
      message.channel.send(" " + message.author.toString() + "» GG, You just advance to **Tier** " + profile.tier + "")
     }
