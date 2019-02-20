@@ -142,6 +142,7 @@ client.on('message', message => {
           
           var maxXp=100 + (profile.level - 1) * 75;
           var maxTier=500 + (profile.tier - 1) * 50;
+    }
           
     profile.wood = profile.wood+45;
     profile.stone = profile.stone+35;
