@@ -131,6 +131,7 @@ client.on('message', message => {
     profile = client.getProfile.get(user.username);
     if (!profile) {
       profile = helloProfile;
+      profile.username = user.username;
       client.setProfile.run(profile);
     }
     profile.wood = profile.wood+45;
