@@ -82,7 +82,7 @@ client.on('message', message => {
       client.setProfile.run(profile);
     }
           
-          var maxXp=1000 + (profile.level - 1) * 150;
+          var maxXp=100 + (profile.level - 1) * 75;
           
     message.channel.send({
       embed: {
@@ -138,7 +138,7 @@ client.on('message', message => {
       client.setProfile.run(profile);
     }
           
-          var maxXp=1000 + (profile.level - 1) * 150;
+          var maxXp=100 + (profile.level - 1) * 75;
           
     profile.wood = profile.wood+45;
     profile.stone = profile.stone+35;
