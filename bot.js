@@ -81,6 +81,9 @@ client.on('message', message => {
       profile.username = user.username;
       client.setProfile.run(profile);
     }
+          
+          var maxXp=1000 + (profile.level - 1) * 150;
+          
     message.channel.send({
       embed: {
         color: 3447003,
@@ -92,7 +95,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Profile",
-          value: "**Level:** " + profile.level + " \n **Experience:** " + profile.experience + "/1000 \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** " + profile.tierxp + "/2000 \n **Balance:** " + profile.balance + " <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
+          value: "**Level:** " + profile.level + " \n **Experience:** " + profile.experience + "/"+maxXp+" \n **Lobby:** None \n **Tier:** 1 \n **Tier XP:** " + profile.tierxp + "/2000 \n **Balance:** " + profile.balance + " <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
 
         }, ],
 
