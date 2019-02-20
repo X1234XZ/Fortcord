@@ -7,7 +7,7 @@ const sql = new SQLite('../db/fortcord.db');
 
 const helloProfile = {
         id: null,
-        username: user.username,
+        username: null,
         wood: 0,
         stone: 0,
         metal: 0,
@@ -78,6 +78,7 @@ client.on('message', message => {
     profile = client.getProfile.get(user.username);
     if (!profile) {
       profile = helloProfile;
+      profile.username = user.username;
       client.setProfile.run(profile);
     }
     message.channel.send({
