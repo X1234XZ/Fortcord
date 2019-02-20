@@ -97,7 +97,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Profile",
-          value: "**Level:** " + profile.level + " \n **Experience:** " + profile.experience + "/"+maxXp+" \n **Lobby:** None \n **Tier:** "+profile.tier+"/"+maxTier+" \n **Tier XP:** " + profile.tierxp + "/2000 \n **Balance:** " + profile.balance + " <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
+          value: "**Level:** " + profile.level + " \n **Experience:** " + profile.experience + "/"+maxXp+" \n **Lobby:** None \n **Tier:** "+profile.tier+" \n **Tier XP:** " + profile.tierxp + "/"+maxTier+" \n **Balance:** " + profile.balance + " <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
 
         }, ],
 
