@@ -137,13 +137,16 @@ client.on('message', message => {
       profile.username = user.username;
       client.setProfile.run(profile);
     }
+          
+          var maxXp=1000 + (profile.level - 1) * 150;
+          
     profile.wood = profile.wood+45;
     profile.stone = profile.stone+35;
     profile.metal = profile.metal+5;
     profile.experience = profile.experience+5;
-    if (profile.experience >= 1000) {
+    if (profile.experience >= maxXp) {
       profile.level = profile.level+1;
-      profile.experience = profile.experience-1000
+      profile.experience = profile.experience-maxXp
       message.channel.send(" " + message.author.toString() + "» GG, You just advance to **level** " + profile.level + "")
     }
     profile.tierxp = profile.tierxp+2;
