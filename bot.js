@@ -24,7 +24,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity("Fortcord with f!help");
   client.getProfile = sql.prepare("SELECT * FROM profile WHERE username = ?");
-  client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance, experience, tierxp, level) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance, @experience, @tierxp, @level);");
+  client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance, experience, tierxp, level, tier) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance, @experience, @tierxp, @level, @tier);");
 });
 
 client.on('message', message => {
