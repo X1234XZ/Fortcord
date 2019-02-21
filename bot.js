@@ -243,7 +243,7 @@ client.on('message', message => {
 
 
 
-})
+}
 
 
 
