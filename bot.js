@@ -237,6 +237,15 @@ client.on('message', message => {
             file: "https://image.fnbr.co/pickaxe/5abf70c2577d2d6afc3fa6c7/png.png"}
           )
         };
+  
+  
+  
+  if (msg === prefix + 'info cliffhanger') {
+
+        message.channel.send("**Name:** Cliffhanger \n **Rating:** 25/100 \n **Cost:** 300 <:VBuck:544626836332871692> \n **Ressources:** `20`<:wood:544704700935831558>, `5`<:stone:544706153272180737>", {
+            file: "https://image.fnbr.co/pickaxe/5ab176665f957f27504aa51b/icon.png"}
+          )
+        };
 
 
 
