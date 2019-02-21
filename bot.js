@@ -234,15 +234,17 @@ client.on('message', message => {
       if (msg === prefix + 'info default') {
 
         message.channel.send("**Name:** Default pickaxe \n **Rating:** 10/100 \n **Cost:** No cost because you gain it when you start \n **Ressources:** `10`<:wood:544704700935831558>", {
-          file: "https://image.fnbr.co/pickaxe/5abf70c2577d2d6afc3fa6c7/png.png"
-        });
+            file: "https://image.fnbr.co/pickaxe/5abf70c2577d2d6afc3fa6c7/png.png"
+          )
+        };
 
 
 
 
-      }
+      
+    })
 
 
 
 
-      client.login(auth.token);
+    client.login(auth.token);
