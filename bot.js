@@ -233,23 +233,9 @@ client.on('message', message => {
   
   if (msg === prefix + 'info default'){
   
-    let user = message.mentions.users.first() || message.author;
-    message.channel.send({
-      embed: {
-        color: 3447003,
-
-        fields: [{
-          name: "Default pickaxe",
-          value: "("**Name:**Default pickaxe", {
-    file: "https://image.fnbr.co/pickaxe/5abf70c2577d2d6afc3fa6c7/png.png" 
-}); "
-
-        }, ],
-
-
-      }
-    });
-  }
+    message.channel.send("**Name:** Default pickaxe \n **Rating:** 10/100 \n **Cost:** No cost because you gain it when you start \n **Ressources:** `10`<:wood:544704700935831558>", {
+    file: "https://image.fnbr.co/pickaxe/5abf70c2577d2d6afc3fa6c7/png.png"
+});
     
   
  
