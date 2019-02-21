@@ -231,12 +231,28 @@ client.on('message', message => {
     });
   }
   
-  if (msg === prefix + 'hello'){
-  message.channel.send("My pickaxe", {
-    file: "https://image.fnbr.co/pickaxe/5abf70c2577d2d6afc3fa6c7/png.png" 
-});
+  if (msg === prefix + 'info default'){
   
+    let user = message.mentions.users.first() || message.author;
+    message.channel.send({
+      embed: {
+        color: 3447003,
+
+        fields: [{
+          name: "Default pickaxe",
+          value: "("**Name:**Default pickaxe", {
+    file: "https://image.fnbr.co/pickaxe/5abf70c2577d2d6afc3fa6c7/png.png" 
+}); "
+
+        }, ],
+
+
+      }
+    });
   }
+    
+  
+ 
 
 
 
