@@ -6,18 +6,18 @@ const sql = new SQLite('../db/fortcord.db');
 
 
 const helloProfile = {
-        id: null,
-        username: null,
-        wood: 0,
-        stone: 0,
-        metal: 0,
-        gold: 0,
-        balance: 0,
-        experience: 0,
-        tierxp: 0,
-        tier: 1,
-        level: 1
-      }
+  id: null,
+  username: null,
+  wood: 0,
+  stone: 0,
+  metal: 0,
+  gold: 0,
+  balance: 0,
+  experience: 0,
+  tierxp: 0,
+  tier: 1,
+  level: 1
+}
 
 
 client.on('ready', () => {
@@ -74,7 +74,7 @@ client.on('message', message => {
     message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is currently unavailable. \n **Please wait patiently, thank you!**");
   }
 
-  if (msg === prefix + 'profile'|| msg === prefix + 'inv') {
+  if (msg === prefix + 'profile' || msg === prefix + 'inv') {
     let user = message.mentions.users.first() || message.author;
     profile = client.getProfile.get(user.username);
     if (!profile) {
@@ -82,10 +82,10 @@ client.on('message', message => {
       profile.username = user.username;
       client.setProfile.run(profile);
     }
-          
-          var maxXp=100 + (profile.level - 1) * 75;
-          var maxTier=500 + (profile.tier - 1) * 50;
-          
+
+    var maxXp = 100 + (profile.level - 1) * 75;
+    var maxTier = 500 + (profile.tier - 1) * 50;
+
     message.channel.send({
       embed: {
         color: 3447003,
@@ -97,7 +97,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Profile",
-          value: "**Level:** " + profile.level + " \n **Experience:** " + profile.experience + "/"+maxXp+" \n **Lobby:** None \n **Tier:** "+profile.tier+" \n **Tier XP:** " + profile.tierxp + "/"+maxTier+" \n **Balance:** " + profile.balance + " <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
+          value: "**Level:** " + profile.level + " \n **Experience:** " + profile.experience + "/" + maxXp + " \n **Lobby:** None \n **Tier:** " + profile.tier + " \n **Tier XP:** " + profile.tierxp + "/" + maxTier + " \n **Balance:** " + profile.balance + " <:VBuck:544626836332871692> \n **Battle pass:** Free Pass \n **Pickaxe:** <:pulse_axe:546816166056689682>[Pulse axe]`x1`"
 
         }, ],
 
@@ -127,7 +127,7 @@ client.on('message', message => {
 
 
   }
-  
+
 
 
   if (msg === prefix + 'break' || msg === prefix + 'b') {
@@ -139,32 +139,30 @@ client.on('message', message => {
       profile.username = user.username;
       client.setProfile.run(profile);
     }
-          
-          var maxXp=100 + (profile.level - 1) * 75;
-          var maxTier=500 + (profile.tier - 1) * 50;
-    }
-          
-    profile.wood = profile.wood+45;
-    profile.stone = profile.stone+35;
-    profile.metal = profile.metal+5;
-    profile.experience = profile.experience+5;
+
+    var maxXp = 100 + (profile.level - 1) * 75;
+    var maxTier = 500 + (profile.tier - 1) * 50;
+
+    profile.wood = profile.wood + 45;
+    profile.stone = profile.stone + 35;
+    profile.metal = profile.metal + 5;
+    profile.experience = profile.experience + 5;
     if (profile.experience >= maxXp) {
-      profile.level = profile.level+1;
-      profile.experience = profile.experience-maxXp
+      profile.level = profile.level + 1;
+      profile.experience = profile.experience - maxXp
       message.channel.send(" " + message.author.toString() + "» GG, You just advance to **level** " + profile.level + "")
     }
-    profile.tierxp = profile.tierxp+2;
+    profile.tierxp = profile.tierxp + 2;
     if (profile.tierxp >= maxTier) {
-    profile.tier = profile.tier+1;
-    profile.tierxp = profile.tierxp-maxTier
-     message.channel.send(" " + message.author.toString() + "» GG, You just advance to **Tier** " + profile.tier + "")
+      profile.tier = profile.tier + 1;
+      profile.tierxp = profile.tierxp - maxTier
+      message.channel.send(" " + message.author.toString() + "» GG, You just advance to **Tier** " + profile.tier + "")
     }
     client.setProfile.run(profile);
 
-    message.channel.send
-            (" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>`[Pulse axe]`")
+    message.channel.send(" " + message.author.toString() + "» You broke `45` <:wood:544704700935831558>, `35` <:stone:544706153272180737>,  and `5` <:Metal:544706407719501836> with your <:pulse_axe:546816166056689682>`[Pulse axe]`")
 
-  })
+  }
 
 
 
@@ -194,8 +192,8 @@ client.on('message', message => {
     message.channel.send(`${client.user.username} is on **${scount}** servers with **${usercount}** members!`)
 
   }
-  
-  
+
+
   if (msg === prefix + 'shop') {
 
     let user = message.mentions.users.first() || message.author;
@@ -213,8 +211,8 @@ client.on('message', message => {
       }
     });
   }
-  
-  
+
+
   if (msg === prefix + 'shop pickaxe') {
 
     let user = message.mentions.users.first() || message.author;
@@ -232,12 +230,9 @@ client.on('message', message => {
       }
     });
   }
-  
-  
-  
-  
 
-  
+
+
 
 })
 
