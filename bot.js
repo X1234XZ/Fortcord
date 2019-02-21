@@ -230,6 +230,13 @@ client.on('message', message => {
       }
     });
   }
+  
+  if (msg === prefix + 'hello'){
+  message.channel.send("My pickaxe", {
+    file: "https://image.fnbr.co/pickaxe/5abf70c2577d2d6afc3fa6c7/png.png" 
+});
+  
+  }
 
 
 
