@@ -136,7 +136,7 @@ client.on('message', message => {
       if (msg === prefix + 'break' || msg === prefix + 'b') {
         permited = true;
         let user = message.mentions.users.first() || message.author;
-        timestamp = client.getTimestamp.get(user.username);
+        //timestamp = client.getTimestamp.get(username);
         if(cooldown){
           //caculate the difference between last time and now
           var datetime = new Date( timestamp.executed ).getTime();
