@@ -26,7 +26,7 @@ client.on('ready', () => {
   client.user.setActivity(`Fortcord on ${scount} servers`);
   client.getProfile = sql.prepare("SELECT * FROM profile WHERE username = ?");
   client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance, experience, tierxp, level, tier) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance, @experience, @tierxp, @level, @tier);");
-  client.getCooldown = sql.prepare("SELECT * FROM cooldown WHERE username = ?");
+  client.getCooldown = sql.prepare("SELECT * FROM cooldown WHERE username = ? and command = ? ");
   client.setCooldown = sql.prepare("INSERT OR REPLACE INTO cooldown (id, username, command, last executed) VALUES (@id, @username, @command, @last executed)");
 });
 
