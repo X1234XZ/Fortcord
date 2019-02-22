@@ -23,7 +23,7 @@ const helloProfile = {
 client.on('ready', () => {
   var scount = client.guilds.size
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity(`Fortcord on ${scount}`);
+  client.user.setActivity(`Fortcord on ${scount} servers`);
   client.getProfile = sql.prepare("SELECT * FROM profile WHERE username = ?");
   client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance, experience, tierxp, level, tier) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance, @experience, @tierxp, @level, @tier);");
 });
