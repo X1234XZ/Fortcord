@@ -133,21 +133,7 @@ client.on('message', message => {
 
 
 
-      if (msg === prefix + 'break' || msg === prefix + 'b') {
-        permited = true;
-        let user = message.mentions.users.first() || message.author;
-        /*timestamp = client.getTimestamp.get(username);
-        if(timestamp){
-          //caculate the difference between last time and now
-          var datetime = new Date( timestamp.executed ).getTime();
-          var now = new Date().getTime();
-        }*/
-        
-        if(!permited) {
-          
-          return;
-        }
-        
+      if (msg === prefix + 'break' || msg === prefix + 'b')
         
         
         profile = client.getProfile.get(user.username);
