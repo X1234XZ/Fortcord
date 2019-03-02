@@ -144,7 +144,7 @@ client.on('message', message => {
         }*/
         
         if(!permited) {
-          //send a message
+          
           return;
         }
         
