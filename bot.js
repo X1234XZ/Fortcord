@@ -182,7 +182,7 @@ client.on('message', message => {
 
             fields: [{
               name: "WAIT!!!",
-              value: " " + message.author.toString() + " »STOP! Wait " + (**cooltime**) + " seconds to break again"
+              value: " " + message.author.toString() + " »**STOP!** Wait " + (cooltime) + " seconds to break again!"
 
             }, ],
 
