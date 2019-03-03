@@ -77,7 +77,7 @@ client.on('message', message => {
         message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is currently unavailable. \n **Please wait patiently, we will add this command shortly, thank you!**");
       }
 
-      if (msg === prefix + 'profile' || msg === prefix + 'inv') {
+      if (msg === prefix + 'profile' || msg === prefix + 'inv' || msg === prefix + 'pfl') {
         let user = message.mentions.users.first() || message.author;
         profile = client.getProfile.get(user.username);
         if (!profile) {
@@ -175,7 +175,20 @@ client.on('message', message => {
         let user = message.mentions.users.first() || message.author;
         let cooltime=getCooldownTime(user.username,"break");
         if(cooltime > 0){
-          message.channel.send(" " + message.author.toString() + " »You have to wait for " + (cooltime) + " seconds to break again!")
+         let user = message.mentions.users.first() || message.author;
+        message.channel.send({
+          embed: {
+            color: 3447003,
+
+            fields: [{
+              name: "WAIT!!!",
+              value: " " + message.author.toString + " »STOP! Wait" + (cooltime) + "seconds to break again"
+
+            }, ],
+
+
+          }
+        });
            return;
         }
         
