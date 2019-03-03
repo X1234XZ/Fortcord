@@ -143,7 +143,7 @@ client.on('message', message => {
           if((nowtime-datetime)>=cooltime) {
             cooltime=0;
           }else{
-            cooltime = (nowtime-datetime) / 1000;
+            cooltime = (cooltime - nowtime - datetime) / 1000;
           }
         }else{
           cooltime =0;
