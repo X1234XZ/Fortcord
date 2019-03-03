@@ -134,7 +134,7 @@ client.on('message', message => {
   
       function getCooldownTime(username,command){
         timestamp = client.getTimestamp.get(username,command);
-        var cooltime=3500
+        var cooltime=4000
         if(timestamp){
           //caculate the difference between last time and now
           var datetime = new Date( timestamp.executed ).getTime();
