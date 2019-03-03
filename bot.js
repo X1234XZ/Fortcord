@@ -171,17 +171,15 @@ client.on('message', message => {
 
 
       if (msg === prefix + 'break' || msg === prefix + 'b' || msg === prefix + 'B') {
-        permited = true;
+
         let user = message.mentions.users.first() || message.author;
         let cooltime=getCooldownTime(user.username,"break");
         if(cooltime > 0){
-          permited=false;
+          
+           return;
         }
         
-        if(!permited) {
-          
-          return;
-        }
+        
         
         
         
