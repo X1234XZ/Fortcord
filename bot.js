@@ -175,7 +175,7 @@ client.on('message', message => {
         let user = message.mentions.users.first() || message.author;
         let cooltime=getCooldownTime(user.username,"break");
         if(cooltime > 0){
-          
+          message.channel.send(" " + message.author.toString() + "You have to wait for " + (cooltime / 1000) + " seconds")
            return;
         }
         
