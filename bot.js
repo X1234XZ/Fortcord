@@ -62,7 +62,7 @@ client.on('message', message => {
 
       if (msg === prefix + 'server') {
 
-        message.channel.send(" " + message.author.toString() + "**» Come and join the support server!!!** \n You can also chat with others. https://discord.gg/vb77EKr");
+        message.channel.send(" " + message.author.toString() + "**» Come and join the support server!!!** \n You can also chat with others. https://discord.gg/vb77EKr");   
 
       }
 
@@ -74,7 +74,7 @@ client.on('message', message => {
 
       if (msg === prefix + 'vote') {
 
-        message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is currently unavailable. \n **Please wait patiently, thank you!**");
+        message.channel.send(" " + message.author.toString() + "» Sorry about that, the command is currently unavailable. \n **Please wait patiently, we will add this command shortly, thank you!**");
       }
 
       if (msg === prefix + 'profile' || msg === prefix + 'inv') {
@@ -130,38 +130,19 @@ client.on('message', message => {
 
 
       }
-  
-  
-      function getCooldownTime(username,command){
-        timestamp = client.getTimestamp.get(username,command);
-        var cooltime=3500
+
+
+
+      if (msg === prefix + 'break' || msg === prefix + 'b' || msg === prefix + 'B') {
+        permited = true;
+        let user = message.mentions.users.first() || message.author;
+        /*timestamp = client.getTimestamp.get(username);
         if(timestamp){
           //caculate the difference between last time and now
           var datetime = new Date( timestamp.executed ).getTime();
-          var nowtime = new Date().getTime();
-          console.log(nowtime);
-          console.log(datetime);
-          if((nowtime-datetime)>=cooltime) {
-            cooltime=0;
-          }else{
-            cooltime = (nowtime-datetime) / 1000;
-          }
-        }else{
-          cooltime =0;
-        }
+          var now = new Date().getTime();
+        }*/
         
-        return cooltime;
-      }
-
-
-
-      if (msg === prefix + 'break' || msg === prefix + 'b') {
-        permited = true;
-        let user = message.mentions.users.first() || message.author;
-        let cooltime=getCooldownTime(user.username,"break");
-        if(cooltime > 0){
-          permited=false;
-        }
         if(!permited) {
           
           return;
