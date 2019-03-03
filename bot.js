@@ -150,7 +150,7 @@ client.on('message', message => {
           cooltime =0;
         }
         timestamp=timestamp || {
-          username:user.username,
+          username:username,
           command:command,
           
         } 
