@@ -139,8 +139,7 @@ client.on('message', message => {
           //caculate the difference between last time and now
           var datetime = new Date( timestamp.executed ).getTime();
           var nowtime = new Date().getTime();
-          console.log(nowtime);
-          console.log(datetime);
+          
           if((nowtime-datetime)>=cooltime) {
             cooltime=0;
           }else{
