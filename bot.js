@@ -154,13 +154,12 @@ client.on('message', message => {
         } 
         if(rs == 0){
          var currentdate = new Date(); 
-         var datetime = currentdate.getFullYear() + "-"
+         timestamp.executed = currentdate.getFullYear() + "-"
                 + (currentdate.getMonth()+1)  + "-" 
                 + currentdate.getDate() + " "  
                 + currentdate.getHours() + ":"  
                 + currentdate.getMinutes() + ":" 
                 + currentdate.getSeconds();
-         timestamp.executed=datetime;
         }
         client.setTimestamp.run(timestamp);
         return rs;
