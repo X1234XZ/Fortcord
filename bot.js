@@ -149,13 +149,21 @@ client.on('message', message => {
         }else{
           cooltime =0;
         }
+        
         timestamp=timestamp || {
           id:null,
           username:username,
           command:command,
           
         } 
-        timestamp.executed=new Date();
+        var currentdate = new Date(); 
+        var datetime = currentdate.getFullYear() + "-"
+                + (currentdate.getMonth()+1)  + "-" 
+                + currentdate.getDate() + " "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+        timestamp.executed=datetime;
         client.setTimestamp.run(timestamp);
         return cooltime;
       }
