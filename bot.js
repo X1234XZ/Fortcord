@@ -142,7 +142,7 @@ client.on('message', message => {
           var nowtime = new Date().getTime();
           
           if((nowtime-datetime)<cooltime) {
-            rs = (cooltime - nowtime - datetime) / 1000;
+            rs = (cooltime - (nowtime - datetime)) / 1000;
           }
         }
         
