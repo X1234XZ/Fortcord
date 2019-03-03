@@ -192,7 +192,7 @@ client.on('message', message => {
 
             fields: [{
               name: "Information about the bot",
-              value: "**Created**: `16 January 2019`   **Added to Discordbots**: `February 14 2019`  \n **Owner**: `!!![Hello1234]!!!` **Bot status**: `online` \n **Website**: Visit http://fortcord.com"
+              value: "**Created**: `16 January 2019`   **Added to Discordbots**: `February 14 2019`  \n **Owner**: `!!![Hello1234]!!!#1466` **Bot status**: `online` \n **Website**: Visit http://fortcord.com"
 
             }, ],
 
