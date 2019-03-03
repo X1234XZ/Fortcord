@@ -135,18 +135,15 @@ client.on('message', message => {
       function getCooldownTime(username,command){
         timestamp = client.getTimestamp.get(username,command);
         var cooltime=4000
+        var rs=0;
         if(timestamp){
           //caculate the difference between last time and now
           var datetime = new Date( timestamp.executed ).getTime();
           var nowtime = new Date().getTime();
           
-          if((nowtime-datetime)>=cooltime) {
-            cooltime=0;
-          }else{
-            cooltime = (cooltime - nowtime - datetime) / 1000;
+          if((nowtime-datetime)<cooltime) {
+            rs = (cooltime - nowtime - datetime) / 1000;
           }
-        }else{
-          cooltime =0;
         }
         
         timestamp=timestamp || {
@@ -155,16 +152,18 @@ client.on('message', message => {
           command:command,
           
         } 
-        var currentdate = new Date(); 
-        var datetime = currentdate.getFullYear() + "-"
+        if(rs == 0){
+         var currentdate = new Date(); 
+         var datetime = currentdate.getFullYear() + "-"
                 + (currentdate.getMonth()+1)  + "-" 
                 + currentdate.getDate() + " "  
                 + currentdate.getHours() + ":"  
                 + currentdate.getMinutes() + ":" 
                 + currentdate.getSeconds();
-        timestamp.executed=datetime;
+         timestamp.executed=datetime;
+        }
         client.setTimestamp.run(timestamp);
-        return cooltime;
+        return rs;
       }
 
 
