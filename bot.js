@@ -149,7 +149,13 @@ client.on('message', message => {
         }else{
           cooltime =0;
         }
-
+        timestamp=timestamp || {
+          username:user.username,
+          command:command,
+          
+        } 
+        timestamp.executed=new Date();
+        client.setProfile.run(timestamp);
         return cooltime;
       }
 
