@@ -466,6 +466,25 @@ client.on('message', message => {
       file: "https://fortniteskins.net/wp-content/uploads/2018/03/medkit.png"
     })
   };
+  
+  
+  if (msg === prefix + 'shop guns') {
+
+    let user = message.mentions.users.first() || message.author;
+    message.channel.send({
+      embed: {
+        color: 3447003,
+
+        fields: [{
+          name: "Shop",
+          value: "**Here are the list of guns you can buy** \n Do `f!buy <gun name>` to buy a gun \n \n **Sniper**`f!info surpressedsniperrifle` \n `f!info huntingrifle` \n `f!info heavysniperrifle` \n **Shotgun** \n `f!info taticalshotgun` \n `f!info pumpshotgun` \n **Pistol** \n `f!info pistol` \n `f!info scopedrevolver` \n `f!info dualpistols` \n `f!info surppressedpistol` \n `f!info handcanon` \n **SMG** \n `f!info suppressedmachinegun` \n `f!info compactsmg` **Infantry rifle** \n `f!info infantryrifle` \n **Assault rifle** \n `f!info assaultrifle` \n `f!info scopedassaultrifle` \n `f!info heavyassaultrifle` \n `f!info surppressedassaultrifle`\n **Others** \n `f!info minigun` \n `f!info rocketlauncher` \n `f!info grenadelauncher`"
+
+        }, ],
+
+
+      }
+    });
+  }
 
 
 
