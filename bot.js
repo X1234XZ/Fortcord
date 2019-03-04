@@ -431,6 +431,25 @@ client.on('message', message => {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/8/8c/Consumable_slurp.png"
     })
   };
+  
+  
+  if (msg === prefix + 'shop healingitems') {
+
+    let user = message.mentions.users.first() || message.author;
+    message.channel.send({
+      embed: {
+        color: 3447003,
+
+        fields: [{
+          name: "Shop",
+          value: "**Here are the list of healing items you can buy** \n Do `f!buy <item name>` to buy an item \n \n `f!info bandages` \n `f!info medkit`"
+
+        }, ],
+
+
+      }
+    });
+  }
 
 
 
