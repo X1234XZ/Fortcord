@@ -403,7 +403,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info smallshield') {
 
-    message.channel.send("**Name:** Small shield potion \n **Rating:** 30/100 \n **Shield:** Gives you `25`% of shield.", {
+    message.channel.send("**Name:** Small shield potion \n **Rating:** 30/100 \n **Shield:** Gives you `25`% of shield. \n **Cost:** 20 <:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/8/81/Consumable_Small_Shield_Potion.png"
     })
   };
@@ -411,7 +411,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info shield') {
 
-    message.channel.send("**Name:** Shield potion \n **Rating:** 60/100 \n **Shield:** Gives you `50`% of shield.", {
+    message.channel.send("**Name:** Shield potion \n **Rating:** 60/100 \n **Shield:** Gives you `50`% of shield. \n **Cost:** 50<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/d/d5/Shield_potion_icon.png"
     })
   };
@@ -419,7 +419,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info chugjug') {
 
-    message.channel.send("**Name:** Chug jug \n **Rating:** 90/100 \n **Shield:** Gives you `100`% of shield. \n **Health:** Gives you `100`% of your health.", {
+    message.channel.send("**Name:** Chug jug \n **Rating:** 90/100 \n **Shield:** Gives you `100`% of shield. \n **Health:** Gives you `100`% of your health. \n **Cost:** 230<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/9/96/Consumable_chug.png"
     })
   };
@@ -427,7 +427,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info slurpjuice') {
 
-    message.channel.send("**Name:** Slurp juice \n **Rating:** 80/100 \n **Shield:** Gives you `75`% of shield. ", {
+    message.channel.send("**Name:** Slurp juice \n **Rating:** 80/100 \n **Shield:** Gives you `75`% of shield. \n **Cost:** 120<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/8/8c/Consumable_slurp.png"
     })
   };
@@ -454,7 +454,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info bandages') {
 
-    message.channel.send("**Name:** Bandages \n **Rating:** 45/100 \n **Health:** Gives you `25`% of your health.", {
+    message.channel.send("**Name:** Bandages \n **Rating:** 45/100 \n **Health:** Gives you `25`% of your health. \n **Cost:** 60<:VBuck:544626836332871692>", {
       file: "https://fortniteskins.net/wp-content/uploads/2018/03/bandages-icon.png"
     })
   };
@@ -462,7 +462,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info medkit') {
 
-    message.channel.send("**Name:** Med kit \n **Rating:** 60/100 \n **Health:** Gives you `100`% of your health.", {
+    message.channel.send("**Name:** Med kit \n **Rating:** 60/100 \n **Health:** Gives you `100`% of your health. \n **Cost:** 120<:VBuck:544626836332871692>", {
       file: "https://fortniteskins.net/wp-content/uploads/2018/03/medkit.png"
     })
   };
@@ -485,6 +485,22 @@ client.on('message', message => {
       }
     });
   }
+  
+  
+  if (msg === prefix + 'info surpressedsniperrifle') {
+
+    message.channel.send("**Name:** Surpressed Sniper Rifle \n **Rating:** 55/100 \n **Damage:** 57/100 \n **Bullet type:** Heavy bullet \n **Cost;** 240<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/e/eb/SuppressedSniper.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info huntingrifle') {
+
+    message.channel.send("**Name:** Hunting Rifle \n **Rating:** 46/100 \n **Damage:** 43/100 \n **Bullet type:** Heavy bullet \n **Cost;** 170<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/5/55/Bolt-action_rifle_icon.png"
+    })
+  };
 
 
 
