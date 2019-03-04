@@ -477,7 +477,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Shop",
-          value: "**Here are the list of guns you can buy** \n Do `f!buy <gun name>` to buy a gun \n \n **Sniper**` \n f!info surpressedsniperrifle` \n `f!info huntingrifle` \n `f!info heavysniperrifle` \n **Shotgun** \n `f!info taticalshotgun` \n `f!info pumpshotgun` \n **Pistol** \n `f!info pistol` \n `f!info scopedrevolver` \n `f!info dualpistols` \n `f!info surppressedpistol` \n `f!info handcanon` \n **SMG** \n `f!info suppressedmachinegun` \n `f!info compactsmg` \n **Infantry rifle** \n `f!info infantryrifle` \n **Assault rifle** \n `f!info assaultrifle` \n `f!info scopedassaultrifle` \n `f!info heavyassaultrifle` \n `f!info surppressedassaultrifle`\n **Others** \n `f!info minigun` \n `f!info rocketlauncher` \n `f!info grenadelauncher`"
+          value: "**Here are the list of guns you can buy** \n Do `f!buy <gun name>` to buy a gun \n \n **Sniper** \n `f!info surpressedsniperrifle` \n `f!info huntingrifle` \n `f!info heavysniperrifle` \n **Shotgun** \n `f!info taticalshotgun` \n `f!info pumpshotgun` \n **Pistol** \n `f!info pistol` \n `f!info scopedrevolver` \n `f!info dualpistols` \n `f!info surppressedpistol` \n `f!info handcanon` \n **SMG** \n `f!info suppressedmachinegun` \n `f!info compactsmg` \n **Infantry rifle** \n `f!info infantryrifle` \n **Assault rifle** \n `f!info assaultrifle` \n `f!info scopedassaultrifle` \n `f!info heavyassaultrifle` \n `f!info surppressedassaultrifle`\n **Others** \n `f!info minigun` \n `f!info rocketlauncher` \n `f!info grenadelauncher`"
 
         }, ],
 
