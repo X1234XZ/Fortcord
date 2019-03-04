@@ -533,6 +533,22 @@ client.on('message', message => {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/a/ae/Semi-auto_handgun_icon.png"
     })
   };
+  
+  
+  if (msg === prefix + 'info scopedrevolver') {
+
+    message.channel.send("**Name:** Scoped Revolver \n **Rating:** 30/100 \n **Damage:** 35/100 \n **Bullet type:** Medium bullet \n **Cost;** 100<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/b/b6/Scoped_Revolver.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info dualpistols') {
+
+    message.channel.send("**Name:** Dual Pistols \n **Rating:** 35/100 \n **Damage:** 20/100 `x2` \n **Bullet type:** Medium bullet \n **Cost;** 105<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/6/6b/Dual_pistols_icon.png"
+    })
+  };
 
 
 
