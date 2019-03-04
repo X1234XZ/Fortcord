@@ -458,6 +458,14 @@ client.on('message', message => {
       file: "https://fortniteskins.net/wp-content/uploads/2018/03/bandages-icon.png"
     })
   };
+  
+  
+  if (msg === prefix + 'info medkit') {
+
+    message.channel.send("**Name:** Med kit \n **Rating:** 60/100 \n **Health:** Gives you `100`% of your health.", {
+      file: "https://fortniteskins.net/wp-content/uploads/2018/03/medkit.png"
+    })
+  };
 
 
 
