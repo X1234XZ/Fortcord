@@ -176,7 +176,7 @@ client.on('message', message => {
       let user = message.mentions.users.first() || message.author;
       message.channel.send({
         embed: {
-          color: 3447003,
+          color: FF0000,
 
           fields: [{
             name: "WAIT!!!",
