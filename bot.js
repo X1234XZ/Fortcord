@@ -450,6 +450,14 @@ client.on('message', message => {
       }
     });
   }
+  
+  
+  if (msg === prefix + 'info bandages') {
+
+    message.channel.send("**Name:** Bandages \n **Rating:** 45/100 \n **Health:** Gives you `25`% of your health.", {
+      file: "https://icon2.kisspng.com/20180528/izv/kisspng-fortnite-battle-royale-battle-royale-game-video-ga-bandage-5b0bc600e99503.0135924815274982409568.jpg"
+    })
+  };
 
 
 
