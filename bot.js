@@ -263,7 +263,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Pickaxes",
-          value: "**Select the category by typing** `f!shop <category>` \n \n `Potions`\n `Healing items`\n `Pickaxe` \n `Guns`\n `Ammo`"
+          value: "**Select the category by typing** `f!shop <category>` \n \n `Potions`\n `Healing items`\n `Pickaxe` \n `Guns`\n `Ammo` \n `Items`"
 
         }, ],
 
@@ -282,7 +282,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Shop",
-          value: "**Here are the list of pickaxe** \n Do `f!buy <pickaxe name>` to buy a pickaxe \n \n `f!info default` \n `f!info cliffhanger` \n `f!info ac/dc` \n `f!info plunja` \n `f!info icebreaker` \n `f!info pulseaxe`\n `f!info tataxe`\n `f!info silverfang`\n `f!info oracleaxe`\n `f!info resonator`\n `f!info marshysmasher`"
+          value: "**Here are the list of pickaxe you can buy** \n Do `f!buy <pickaxe name>` to buy a pickaxe \n \n `f!info default` \n `f!info cliffhanger` \n `f!info ac/dc` \n `f!info plunja` \n `f!info icebreaker` \n `f!info pulseaxe`\n `f!info tataxe`\n `f!info silverfang`\n `f!info oracleaxe`\n `f!info resonator`\n `f!info marshysmasher`"
 
         }, ],
 
@@ -379,6 +379,26 @@ client.on('message', message => {
       file: "https://skin-tracker.com/images/fnskins/1002.png"
     })
   };
+  
+  
+  
+  if (msg === prefix + 'shop potions') {
+
+    let user = message.mentions.users.first() || message.author;
+    message.channel.send({
+      embed: {
+        color: 3447003,
+
+        fields: [{
+          name: "Shop",
+          value: "**Here are the list of potions you can buy** \n Do `f!buy <potion name>` to buy a pickaxe \n \n `f!info smallshield` \n `f!info shield` `f!info chugjug` \n `f!info slurpjuice`"
+
+        }, ],
+
+
+      }
+    });
+  }
 
 
 
