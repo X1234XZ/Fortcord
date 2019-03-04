@@ -391,7 +391,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Shop",
-          value: "**Here are the list of potions you can buy** \n Do `f!buy <potion name>` to buy a pickaxe \n \n `f!info smallshield` \n `f!info shield` `f!info chugjug` \n `f!info slurpjuice`"
+          value: "**Here are the list of potions you can buy** \n Do `f!buy <potion name>` to buy a pickaxe \n \n `f!info smallshield` \n `f!info shield` \n `f!info chugjug` \n `f!info slurpjuice`"
 
         }, ],
 
