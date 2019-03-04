@@ -362,6 +362,23 @@ client.on('message', message => {
       file: "https://image.fnbr.co/pickaxe/5b1e89d2efc15524a714c656/icon.png"
     })
   };
+  
+  
+  if (msg === prefix + 'info resonator') {
+
+    message.channel.send("**Name:** Resonator \n **Rating:** 90/100 \n **Cost:** 2200 <:VBuck:544626836332871692> \n **Cooldown:** 2 seconds \n  **Resources:** `90`<:wood:544704700935831558>,`75`<:stone:544706153272180737>, `50`<:Metal:544706407719501836>, `30`<:Gold_Ingot:551953798520766490>", {
+      file: "https://image.fnbr.co/pickaxe/5baf743fed0da913fb120be1/icon.png"
+    })
+  };
+  
+  
+  
+  if (msg === prefix + 'info marshysmasher') {
+
+    message.channel.send("**Name:** Marshy smasher \n **Rating:** 100/100 \n **Cost:** 7500 <:VBuck:544626836332871692> \n **Cooldown:** 1 seconds \n  **Resources:** `110`<:wood:544704700935831558>,`90`<:stone:544706153272180737>, `75`<:Metal:544706407719501836>, `60`<:Gold_Ingot:551953798520766490>", {
+      file: "https://skin-tracker.com/images/fnskins/1002.png"
+    })
+  };
 
 
 
