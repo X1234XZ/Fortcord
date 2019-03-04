@@ -366,7 +366,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info oracleaxe') {
 
-    message.channel.send("**Name:** Oracle axe \n **Rating:** 75/100 \n **Cost:** 1900 <:VBuck:544626836332871692> \n **Cooldown:** 2.5 seconds \n  **Resources:** `75`<:wood:544704700935831558>,`60`<:stone:544706153272180737>, `50`:Metal:544706407719501836>, `15`<:Gold_Ingot:551953798520766490>", {
+    message.channel.send("**Name:** Oracle axe \n **Rating:** 75/100 \n **Cost:** 1900 <:VBuck:544626836332871692> \n **Cooldown:** 2.5 seconds \n  **Resources:** `75`<:wood:544704700935831558>,`60`<:stone:544706153272180737>, `50`<:Metal:544706407719501836>, `15`<:Gold_Ingot:551953798520766490>", {
       file: "https://image.fnbr.co/pickaxe/5b1e89d2efc15524a714c656/icon.png"
     })
   };
