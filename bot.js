@@ -348,14 +348,6 @@ client.on('message', message => {
   };
   
   
-  if (msg === prefix + 'info tataxe') {
-
-    message.channel.send("**Name:** Tat axe \n **Rating:** 50/100 \n **Cost:** 1100 <:VBuck:544626836332871692> \n **Cooldown:** 3 seconds \n  **Resources:** `50`<:wood:544704700935831558>,`40`<:stone:544706153272180737>, `10`<:Metal:544706407719501836>", {
-      file: "https://skin-tracker.com/images/fnskins/213.png"
-    })
-  };
-  
-  
   if (msg === prefix + 'info silverfang') {
 
     message.channel.send("**Name:** Silver Fang \n **Rating:** 55/100 \n **Cost:** 1400 <:VBuck:544626836332871692> \n **Cooldown:** 3 seconds \n  **Resources:** `60`<:wood:544704700935831558>,`50`<:stone:544706153272180737>, `20`<:Metal:544706407719501836>", {
