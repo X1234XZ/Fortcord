@@ -134,7 +134,7 @@ client.on('message', message => {
 
   function getCooldownTime(username, command) {
     timestamp = client.getTimestamp.get(username, command);
-    var cooltime = 10000
+    var cooltime = 5000
     var rs = 0;
     if (timestamp) {
       //caculate the difference between last time and now
@@ -336,6 +336,38 @@ client.on('message', message => {
 
     message.channel.send("**Name:** Pulse axe \n **Rating:** 45/100 \n **Cost:** 950 <:VBuck:544626836332871692> \n **Cooldown:** 3.5 seconds \n  **Resources:** `45`<:wood:544704700935831558>,`35`<:stone:544706153272180737>, `5`<:Metal:544706407719501836>", {
       file: "https://skin-tracker.com/images/fnskins/164.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info tataxe') {
+
+    message.channel.send("**Name:** Tat axe \n **Rating:** 50/100 \n **Cost:** 1100 <:VBuck:544626836332871692> \n **Cooldown:** 3 seconds \n  **Resources:** `50`<:wood:544704700935831558>,`40`<:stone:544706153272180737>, `10`<:Metal:544706407719501836>", {
+      file: "https://skin-tracker.com/images/fnskins/213.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info tataxe') {
+
+    message.channel.send("**Name:** Tat axe \n **Rating:** 50/100 \n **Cost:** 1100 <:VBuck:544626836332871692> \n **Cooldown:** 3 seconds \n  **Resources:** `50`<:wood:544704700935831558>,`40`<:stone:544706153272180737>, `10`<:Metal:544706407719501836>", {
+      file: "https://skin-tracker.com/images/fnskins/213.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info silverfang') {
+
+    message.channel.send("**Name:** Silver Fang \n **Rating:** 55/100 \n **Cost:** 1400 <:VBuck:544626836332871692> \n **Cooldown:** 3 seconds \n  **Resources:** `60`<:wood:544704700935831558>,`50`<:stone:544706153272180737>, `20`<:Metal:544706407719501836>", {
+      file: "https://image.fnbr.co/pickaxe/5ab17e535f957f27504aa544/icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info oracleaxe') {
+
+    message.channel.send("**Name:** Oracle axe \n **Rating:** 75/100 \n **Cost:** 1900 <:VBuck:544626836332871692> \n **Cooldown:** 2.5 seconds \n  **Resources:** `75`<:wood:544704700935831558>,`60`<:stone:544706153272180737>, `50`:Metal:544706407719501836>, `15`<:Gold_Ingot:551953798520766490>", {
+      file: "https://image.fnbr.co/pickaxe/5b1e89d2efc15524a714c656/icon.png"
     })
   };
 
