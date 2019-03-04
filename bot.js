@@ -501,6 +501,38 @@ client.on('message', message => {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/5/55/Bolt-action_rifle_icon.png"
     })
   };
+  
+  
+  if (msg === prefix + 'info heavysniperrifle') {
+
+    message.channel.send("**Name:** Heavy Sniper Rifle \n **Rating:** 61/100 \n **Damage:** 68/100 \n **Bullet type:** Heavy bullet \n **Cost;** 260<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/4/4e/Obliterator_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info taticalshotgun') {
+
+    message.channel.send("**Name:** Tatical Shotgun \n **Rating:** 33/100 \n **Damage:** 37/100 \n **Bullet type:** Shell 'n' slugs \n **Cost;** 120<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/b/be/Br_tactical_shotgun_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info pumpshotgun') {
+
+    message.channel.send("**Name:** Pump Shotgun \n **Rating:** 35/100 \n **Damage:** 41/100 \n **Bullet type:** Shell 'n' slugs \n **Cost;** 130<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/5/54/Pump-action_shotgun_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info pistol') {
+
+    message.channel.send("**Name:** Pistol \n **Rating:** 25/100 \n **Damage:** 33/100 \n **Bullet type:** Light bullet \n **Cost;** 60<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/a/ae/Semi-auto_handgun_icon.png"
+    })
+  };
 
 
 
