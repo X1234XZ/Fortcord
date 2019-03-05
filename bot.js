@@ -302,7 +302,7 @@ client.on('message', message => {
 
   if (msg === prefix + 'info cliffhanger') {
 
-    message.channel.send("**Name:** Cliffhanger \n **Rating:** 15/100 \n **Cost:** 300 <:VBuck:544626836332871692> \n **Cooldown:** 5 seconds \n **Resources:** `20`<:wood:544704700935831558>, `5`<:stone:544706153272180737>", {
+    message.channel.send("**Name:** Cliffhanger \n **Rating:** 15/100 \n **Cost:** 250 <:VBuck:544626836332871692> \n **Cooldown:** 5 seconds \n **Resources:** `20`<:wood:544704700935831558>, `5`<:stone:544706153272180737>", {
       file: "https://image.fnbr.co/pickaxe/5ab176665f957f27504aa51b/icon.png"
     })
   };
@@ -310,7 +310,7 @@ client.on('message', message => {
 
   if (msg === prefix + 'info ac/dc') {
 
-    message.channel.send("**Name:** AC/DC \n **Rating:** 25/100 \n **Cost:** 250 <:VBuck:544626836332871692> \n **Cooldown:** 4.5 seconds \n  **Resources:** `25`<:wood:544704700935831558>,`10`<:stone:544706153272180737>", {
+    message.channel.send("**Name:** AC/DC \n **Rating:** 25/100 \n **Cost:** 300 <:VBuck:544626836332871692> \n **Cooldown:** 4.5 seconds \n  **Resources:** `25`<:wood:544704700935831558>,`10`<:stone:544706153272180737>", {
       file: "https://image.fnbr.co/pickaxe/5ab15ea9a8956031d0159a25/icon.png"
     })
   };
