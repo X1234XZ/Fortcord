@@ -656,7 +656,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Shop",
-          value: "**Here are the list of ammo you can buy** \n Do `f!buy <ammo type>` to buy some ammo \n \n `f!info lightbullets` \n `f!info mediumbullets` \n `f!info heavybullets` \n `f!info shells'n'slugs` \n `f!info rockets`"
+          value: "**Here are the list of ammo you can buy** \n Do `f!buy <ammo type>` to buy some ammo \n \n `f!info lightbullets` \n `f!info mediumbullets` \n `f!info heavybullets` \n `f!info shellsnslugs` \n `f!info rockets`"
 
         }, ],
 
@@ -664,6 +664,47 @@ client.on('message', message => {
       }
     });
   }
+  
+  
+  if (msg === prefix + 'info lightbullets') {
+
+    message.channel.send("**Type:** Light Bullets \n **Amount per purchase:** 20 \n **Cost:** 15<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/6/65/Light_bullets_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info mediumbullets') {
+
+    message.channel.send("**Type:** Medium Bullets \n **Amount per purchase:** 20 \n **Cost:** 20<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/b/bf/Medium_bullets_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info heavybullets') {
+
+    message.channel.send("**Type:** Heavy Bullets \n **Amount per purchase:** 20 \n **Cost:** 15<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/9/96/Heavy_bullets_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info shellsnslugs') {
+
+    message.channel.send("**Type:** shells'n'slugs \n **Amount per purchase:** 20 \n **Cost:** 15<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/1/12/Shells_%27n%27_slugs_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info rockets') {
+
+    message.channel.send("**Type:** Rockets \n **Amount per purchase:** 10 \n **Cost:** 30<:VBuck:544626836332871692>", {
+      file: "http://orcz.com/images/thumb/1/13/FortniteBattleRoyaleAmmoRockets.jpg/400px-FortniteBattleRoyaleAmmoRockets.jpg"
+    })
+  };
+
 
 
 
