@@ -645,6 +645,25 @@ client.on('message', message => {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/9/9f/Grenade_launcher_icon.png"
     })
   };
+  
+  
+  if (msg === prefix + 'shop ammo') {
+
+    let user = message.mentions.users.first() || message.author;
+    message.channel.send({
+      embed: {
+        color: 3447003,
+
+        fields: [{
+          name: "Shop",
+          value: "**Here are the list of ammo you can buy** \n Do `f!buy <ammo type>` to buy some ammo \n \n `f!info lightbullets` \n `f!info mediumbullets` \n `f!info heavybullets` \n `f!info shells'n'slugs` \n `f!info rockets`"
+
+        }, ],
+
+
+      }
+    });
+  }
 
 
 
