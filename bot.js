@@ -704,6 +704,49 @@ client.on('message', message => {
       file: "http://orcz.com/images/thumb/1/13/FortniteBattleRoyaleAmmoRockets.jpg/400px-FortniteBattleRoyaleAmmoRockets.jpg"
     })
   };
+  
+  
+  if (msg === prefix + 'shop item') {
+
+    let user = message.mentions.users.first() || message.author;
+    message.channel.send({
+      embed: {
+        color: 3447003,
+
+        fields: [{
+          name: "Shop",
+          value: "**Here are the list of items you can buy** \n Do `f!buy <item name>` to buy the item \n \n `f!info clinger` \n `f!info dynamite` \n `f!info heavybullets` \n `f!info stinkbomb`"
+
+        }, ],
+
+
+      }
+    });
+  }
+  
+  
+  if (msg === prefix + 'info clinger') {
+
+    message.channel.send("**Name:** Clinger \n **Damage:** 70 \n **Cost:** 400<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/d/de/Clinger_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info dynamite') {
+
+    message.channel.send("**Name:** dynamite \n **Damage:** 50 \n **Cost:** 300<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/c/c2/Dynamite_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info stinkbomb') {
+
+    message.channel.send("**Name:** Stink Bomb \n **Damage per turn:** 10 \n **Duration:** 3 turns \n **Cost:** 200<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/7/77/Stink_bomb_icon.png"
+    })
+  };
 
 
 
