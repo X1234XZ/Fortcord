@@ -477,7 +477,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Shop",
-          value: "**Here are the list of guns you can buy** \n Do `f!buy <gun name>` to buy a gun \n \n **Sniper** \n `f!info surpressedsniperrifle` \n `f!info huntingrifle` \n `f!info heavysniperrifle` \n **Shotgun** \n `f!info taticalshotgun` \n `f!info pumpshotgun` \n **Pistol** \n `f!info pistol` \n `f!info scopedrevolver` \n `f!info dualpistols` \n `f!info surppressedpistol` \n `f!info handcanon` \n **SMG** \n `f!info suppressedmachinegun` \n `f!info compactsmg` \n **Infantry rifle** \n `f!info infantryrifle` \n **Assault rifle** \n `f!info assaultrifle` \n `f!info scopedassaultrifle` \n `f!info heavyassaultrifle` \n `f!info surppressedassaultrifle`\n **Others** \n `f!info minigun` \n `f!info rocketlauncher` \n `f!info grenadelauncher`"
+          value: "**Here are the list of guns you can buy** \n Do `f!buy <gun name>` to buy a gun \n \n **Sniper** \n `f!info suppressedsniperrifle` \n `f!info huntingrifle` \n `f!info heavysniperrifle` \n **Shotgun** \n `f!info taticalshotgun` \n `f!info pumpshotgun` \n **Pistol** \n `f!info pistol` \n `f!info scopedrevolver` \n `f!info dualpistols` \n `f!info suppressedpistol` \n `f!info handcannon` \n **SMG** \n `f!info suppressedmachinegun` \n `f!info compactsmg` \n **Infantry rifle** \n `f!info infantryrifle` \n **Assault rifle** \n `f!info assaultrifle` \n `f!info scopedassaultrifle` \n `f!info heavyassaultrifle` \n `f!info surppressedassaultrifle`\n **Others** \n `f!info minigun` \n `f!info rocketlauncher` \n `f!info grenadelauncher`"
 
         }, ],
 
@@ -487,9 +487,9 @@ client.on('message', message => {
   }
   
   
-  if (msg === prefix + 'info surpressedsniperrifle') {
+  if (msg === prefix + 'info suppressedsniperrifle') {
 
-    message.channel.send("**Name:** Surpressed Sniper Rifle \n **Rating:** 55/100 \n **Damage:** 57/100 \n **Bullet type:** Heavy bullet \n **Cost;** 240<:VBuck:544626836332871692>", {
+    message.channel.send("**Name:** Surpressed Sniper Rifle \n **Rating:** 55/100 \n **Damage:** 57/100 \n **Bullet type:** Heavy bullet \n **Cost:** 240<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/e/eb/SuppressedSniper.png"
     })
   };
@@ -497,7 +497,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info huntingrifle') {
 
-    message.channel.send("**Name:** Hunting Rifle \n **Rating:** 46/100 \n **Damage:** 43/100 \n **Bullet type:** Heavy bullet \n **Cost;** 170<:VBuck:544626836332871692>", {
+    message.channel.send("**Name:** Hunting Rifle \n **Rating:** 46/100 \n **Damage:** 50/100 \n **Bullet type:** Heavy bullet \n **Cost:** 170<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/5/55/Bolt-action_rifle_icon.png"
     })
   };
@@ -505,7 +505,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info heavysniperrifle') {
 
-    message.channel.send("**Name:** Heavy Sniper Rifle \n **Rating:** 61/100 \n **Damage:** 68/100 \n **Bullet type:** Heavy bullet \n **Cost;** 260<:VBuck:544626836332871692>", {
+    message.channel.send("**Name:** Heavy Sniper Rifle \n **Rating:** 61/100 \n **Damage:** 68/100 \n **Bullet type:** Heavy bullet \n **Cost:** 260<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/4/4e/Obliterator_icon.png"
     })
   };
@@ -513,7 +513,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info taticalshotgun') {
 
-    message.channel.send("**Name:** Tatical Shotgun \n **Rating:** 33/100 \n **Damage:** 37/100 \n **Bullet type:** Shell 'n' slugs \n **Cost;** 120<:VBuck:544626836332871692>", {
+    message.channel.send("**Name:** Tatical Shotgun \n **Rating:** 33/100 \n **Damage:** 37/100 \n **Bullet type:** Shell 'n' slugs \n **Cost:** 120<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/b/be/Br_tactical_shotgun_icon.png"
     })
   };
@@ -521,7 +521,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info pumpshotgun') {
 
-    message.channel.send("**Name:** Pump Shotgun \n **Rating:** 35/100 \n **Damage:** 41/100 \n **Bullet type:** Shell 'n' slugs \n **Cost;** 130<:VBuck:544626836332871692>", {
+    message.channel.send("**Name:** Pump Shotgun \n **Rating:** 35/100 \n **Damage:** 41/100 \n **Bullet type:** Shell 'n' slugs \n **Cost:** 130<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/5/54/Pump-action_shotgun_icon.png"
     })
   };
@@ -529,7 +529,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info pistol') {
 
-    message.channel.send("**Name:** Pistol \n **Rating:** 25/100 \n **Damage:** 33/100 \n **Bullet type:** Light bullet \n **Cost;** 60<:VBuck:544626836332871692>", {
+    message.channel.send("**Name:** Pistol \n **Rating:** 25/100 \n **Damage:** 33/100 \n **Bullet type:** Light bullet \n **Cost:** 60<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/a/ae/Semi-auto_handgun_icon.png"
     })
   };
@@ -537,7 +537,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info scopedrevolver') {
 
-    message.channel.send("**Name:** Scoped Revolver \n **Rating:** 30/100 \n **Damage:** 35/100 \n **Bullet type:** Medium bullet \n **Cost;** 100<:VBuck:544626836332871692>", {
+    message.channel.send("**Name:** Scoped Revolver \n **Rating:** 30/100 \n **Damage:** 35/100 \n **Bullet type:** Medium bullet \n **Cost:** 100<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/b/b6/Scoped_Revolver.png"
     })
   };
@@ -545,8 +545,48 @@ client.on('message', message => {
   
   if (msg === prefix + 'info dualpistols') {
 
-    message.channel.send("**Name:** Dual Pistols \n **Rating:** 35/100 \n **Damage:** 20/100 `x2` \n **Bullet type:** Medium bullet \n **Cost;** 105<:VBuck:544626836332871692>", {
+    message.channel.send("**Name:** Dual Pistols \n **Rating:** 35/100 \n **Damage:** 20/100 `x2` \n **Bullet type:** Medium bullet \n **Cost:** 105<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/6/6b/Dual_pistols_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info suppressedpistol') {
+
+    message.channel.send("**Name:** Suppressed Pistol \n **Rating:** 28/100 \n **Damage:** 35/100  \n **Bullet type:** Light bullet \n **Cost:** 70<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/d/db/Suppressed_pistol_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info handcannon') {
+
+    message.channel.send("**Name:** Hand Cannon \n **Rating:** 60/100 \n **Damage:** 75/100  \n **Bullet type:** Heavy bullet \n **Cost:* 300<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/09/Bald_Eagle_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info suppressedmachinegun') {
+
+    message.channel.send("**Name:** Suppressed machine gun\n **Rating:** 54/100 \n **Damage:** 30/100 `x2` \n **Bullet type:** Light bullet \n **Cost:** 240<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/c/ce/Suppressed_smg_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info compactsmg') {
+
+    message.channel.send("**Name:** Compact SMG \n **Rating:** 57/100 \n **Damage:** 35/100 `x2` \n **Bullet type:** Light bullet \n **Cost:** 250<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/1/18/Bobcat_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info infantryrifle') {
+
+    message.channel.send("**Name:** Infantry rifle \n **Rating:** 40/100 \n **Damage:** 43/100 \n **Bullet type:** Medium bullet \n **Cost:** 150<:VBuck:544626836332871692>", {
+      file: "https://assets.rockpapershotgun.com/images/2019/02/Fortnite_patch-notes_v7-40_header-v7-40_BR07_News_Featured_InfantryRifle-1920x1080-48379cf629a8fdb5eafef66b095aed664c5b534e-1212x682.jpg/RPSS/resize/760x-1/format/jpg/quality/70"
     })
   };
 
