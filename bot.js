@@ -586,7 +586,7 @@ client.on('message', message => {
   if (msg === prefix + 'info infantryrifle') {
 
     message.channel.send("**Name:** Infantry rifle \n **Rating:** 40/100 \n **Damage:** 43/100 \n **Bullet type:** Medium bullet \n **Cost:** 150<:VBuck:544626836332871692>", {
-      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/thumb/0/03/InfantryRifle.png/80px-InfantryRifle.png?version=6ddf6e5cf54013a9dec77cf228e859bd"
+      file: "https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/02/28122157/Fortnite_patch-notes_v7-40_br-header-v7-40_BR07_Social_InfantryRifle-1920x1080-7cec963a288275df4913dbd0e916bb908d2c0380.jpg"
     })
   };
 
