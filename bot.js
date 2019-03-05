@@ -706,7 +706,7 @@ client.on('message', message => {
   };
   
   
-  if (msg === prefix + 'shop item') {
+  if (msg === prefix + 'shop items') {
 
     let user = message.mentions.users.first() || message.author;
     message.channel.send({
