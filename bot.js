@@ -477,7 +477,7 @@ client.on('message', message => {
 
         fields: [{
           name: "Shop",
-          value: "**Here are the list of guns you can buy** \n Do `f!buy <gun name>` to buy a gun \n \n **Sniper** \n `f!info suppressedsniperrifle` \n `f!info huntingrifle` \n `f!info heavysniperrifle` \n **Shotgun** \n `f!info taticalshotgun` \n `f!info pumpshotgun` \n **Pistol** \n `f!info pistol` \n `f!info scopedrevolver` \n `f!info dualpistols` \n `f!info suppressedpistol` \n `f!info handcannon` \n **SMG** \n `f!info suppressedmachinegun` \n `f!info compactsmg` \n **Infantry rifle** \n `f!info infantryrifle` \n **Assault rifle** \n `f!info assaultrifle` \n `f!info scopedassaultrifle` \n `f!info heavyassaultrifle` \n `f!info surppressedassaultrifle`\n **Others** \n `f!info minigun` \n `f!info rocketlauncher` \n `f!info grenadelauncher`"
+          value: "**Here are the list of guns you can buy** \n Do `f!buy <gun name>` to buy a gun \n \n **Sniper** \n `f!info suppressedsniperrifle` \n `f!info huntingrifle` \n `f!info heavysniperrifle` \n **Shotgun** \n `f!info taticalshotgun` \n `f!info pumpshotgun` \n **Pistol** \n `f!info pistol` \n `f!info scopedrevolver` \n `f!info dualpistols` \n `f!info suppressedpistol` \n `f!info handcannon` \n **SMG** \n `f!info suppressedmachinegun` \n `f!info compactsmg` \n **Infantry rifle** \n `f!info infantryrifle` \n **Assault rifle** \n `f!info assaultrifle` \n `f!info scopedassaultrifle` \n `f!info heavyassaultrifle` \n `f!info suppressedassaultrifle`\n **Others** \n `f!info minigun` \n `f!info rocketlauncher` \n `f!info grenadelauncher`"
 
         }, ],
 
@@ -589,6 +589,63 @@ client.on('message', message => {
       file: "https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/02/28122157/Fortnite_patch-notes_v7-40_br-header-v7-40_BR07_Social_InfantryRifle-1920x1080-7cec963a288275df4913dbd0e916bb908d2c0380.jpg"
     })
   };
+  
+  
+  if (msg === prefix + 'info assaultrifle') {
+
+    message.channel.send("**Name:** Assault Rifle \n **Rating:** 40/100 \n **Damage:** 50/100 \n **Bullet type:** Medium bullet \n **Cost:** 190<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/a/a2/Assault_rifle_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info scopedassaultrifle') {
+
+    message.channel.send("**Name:** Scoped assault rifle \n **Rating:** 35/100 \n **Damage:** 40/100 \n **Bullet type:** Medium bullet \n **Cost:** 150<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/d/d5/Deathstalker_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info heavyassaultrifle') {
+
+    message.channel.send("**Name:** Heavy assault rifle \n **Rating:** 55/100 \n **Damage:** 63/100 \n **Bullet type:** Medium bullet \n **Cost:** 210<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/4/4e/Heavy_assault_rifle_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info suppressedassaultrifle') {
+
+    message.channel.send("**Name:** Supressed assault rifle \n **Rating:** 48/100 \n **Damage:** 52/100 \n **Bullet type:** Medium bullet \n **Cost:** 190<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/3/35/Suppressed_assault_rifle_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info minigun') {
+
+    message.channel.send("**Name:** Minigun \n **Rating:** 56/100 \n **Damage:** 10/100 `x6` \n **Bullet type:** Light bullet \n **Cost:** 220<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/02/Minigun_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info rocketlauncher') {
+
+    message.channel.send("**Name:** Rocket Launcher \n **Rating:** 75/100 \n **Damage:** 80/100  \n **Bullet type:** Rockets \n **Cost:** 450<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/c/ce/Rocket_launcher_icon.png"
+    })
+  };
+  
+  
+  if (msg === prefix + 'info grenadelauncher') {
+
+    message.channel.send("**Name:** Grenade Launcher \n **Rating:** 60/100 \n **Damage:** 70/100  \n **Bullet type:** Rockets \n **Cost:** 390<:VBuck:544626836332871692>", {
+      file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/9/9f/Grenade_launcher_icon.png"
+    })
+  };
+
 
 
 
