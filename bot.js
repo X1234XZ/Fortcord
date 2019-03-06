@@ -561,7 +561,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'info handcannon') {
 
-    message.channel.send("**Name:** Hand Cannon \n **Rating:** 60/100 \n **Damage:** 75/100  \n **Bullet type:** Heavy bullet \n **Cost:* 300<:VBuck:544626836332871692>", {
+    message.channel.send("**Name:** Hand Cannon \n **Rating:** 60/100 \n **Damage:** 75/100  \n **Bullet type:** Heavy bullet \n **Cost:** 300<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/09/Bald_Eagle_icon.png"
     })
   };
