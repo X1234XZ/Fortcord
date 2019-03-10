@@ -433,7 +433,7 @@ client.on('message', message => {
   };
   
   
-  if (msg === prefix + 'shop healingitems') {
+  if (msg === prefix + 'shop healing items') {
 
     let user = message.mentions.users.first() || message.author;
     message.channel.send({
