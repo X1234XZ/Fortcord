@@ -754,10 +754,10 @@ client.on('message', message => {
   if (msg === prefix + 'buy bandages') {
    
     let user = message.mentions.users.first() || message.author;
-    profile = client.getProfile.get(user.username);
+    user_item = client.getUser_item.get(user.username);
     
     
-    profile.item = profile.item +1;
+    user_item.item_id = user_item.item_id +1;
     
     message.channel.send("You bought a <:bandages:552311892199342109>")
     
