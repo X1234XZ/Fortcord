@@ -757,7 +757,7 @@ client.on('message', message => {
     profile = client.getProfile.get(user.username);
     
     
-    user_item.item_id = user_item.item_id +1;
+    profile.item = profile.item +1;
     
     message.channel.send("You bought a <:bandages:552311892199342109>")
     
