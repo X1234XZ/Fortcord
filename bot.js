@@ -754,17 +754,18 @@ client.on('message', message => {
   if (msg === prefix + 'buy bandages') {
    
     let user = message.mentions.users.first() || message.author;
-    user_item = client.getUser_item.get(user.username);
+    item = client.getItem.get(user.username);
+   // user_item = client.getUser_item.get(user.username);
     
     
     
-    user_item.item_id = user_item.item_id + "<:bandages:552311892199342109>";
-    client.setUser_item.run(user_item);
+    //user_item.item = user_item.item + "<:bandages:552311892199342109>";
+    //client.setUser_item.run(user_item);
     
     
     
     
-    message.channel.send("You bought a <:bandages:552311892199342109>")
+    //message.channel.send("You bought a <:bandages:552311892199342109>")
     
   }
 
