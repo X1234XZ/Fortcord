@@ -28,6 +28,8 @@ client.on('ready', () => {
   client.setProfile = sql.prepare("INSERT OR REPLACE INTO profile (id, username, wood, stone, metal, gold, balance, experience, tierxp, level, tier) VALUES (@id, @username, @wood, @stone, @metal, @gold, @balance, @experience, @tierxp, @level, @tier);");
   client.getTimestamp = sql.prepare("SELECT * FROM timestamp WHERE username = ? and command = ? ");
   client.setTimestamp = sql.prepare("INSERT OR REPLACE INTO timestamp (id, username, command, executed) VALUES (@id, @username, @command, @executed)");
+  client.getUser_item = sql.prepare("SELECT * FROM user_item WHERE user_id = ?");
+  client.setUser_item = sql.prepare("INSERT OR REPLACE INTO user_item (id, user_id, item_id) VALUES (@id, @user_id, @item_id);");
 });
 
 client.on('message', message => {
@@ -747,6 +749,19 @@ client.on('message', message => {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/7/77/Stink_bomb_icon.png"
     })
   };
+  
+  
+  if (msg === prefix + 'buy bandages') {
+   
+    let user = message.mentions.users.first() || message.author;
+    profile = client.getProfile.get(user.username);
+    
+    
+    user_item.item_id = user_item.item_id +1;
+    
+    message.channel.send("You bought a <:bandages:552311892199342109>")
+    
+  }
 
 
 
