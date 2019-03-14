@@ -762,7 +762,7 @@ client.on('message', message => {
   
   if (msg === prefix + 'partner server') {
   
-    message.channel.send(" " + "message.author.toString()" + "**Join the official partner server!!!** \n https://discord.gg/6RUUxpy **Fortcord announcements will also be announced here.*");
+    message.channel.send(" " + message.author.toString() + "**Join the official partner server!!!** \n https://discord.gg/6RUUxpy **Fortcord announcements will also be announced here.*");
   
   }
   
