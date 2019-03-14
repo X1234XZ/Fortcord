@@ -1,3 +1,12 @@
+//if (msg === prefix + 'buy bandages') {
+    //let user = message.mentions.users.first() || message.author;
+    //item = client.getItem.get(user.username);
+   // user_item = client.getUser_item.get(user.username);
+    //user_item.item = user_item.item + "<:bandages:552311892199342109>";
+    //client.setUser_item.run(user_item);
+    //message.channel.send("You bought a <:bandages:552311892199342109>")
+  //}
+
 const Discord = require('discord.js');
 var auth = require('./config.json');
 const client = new Discord.Client();
@@ -751,23 +760,14 @@ client.on('message', message => {
   };
   
   
-  if (msg === prefix + 'buy bandages') {
-   
-    let user = message.mentions.users.first() || message.author;
-    item = client.getItem.get(user.username);
-   // user_item = client.getUser_item.get(user.username);
-    
-    
-    
-    //user_item.item = user_item.item + "<:bandages:552311892199342109>";
-    //client.setUser_item.run(user_item);
-    
-    
-    
-    
-    //message.channel.send("You bought a <:bandages:552311892199342109>")
-    
+  if (msg === prefix + 'partner server') {
+  
+    message.channel.send(" " + "message.author.toString()" + "**Join the official partner server!!!** \n https://discord.gg/6RUUxpy **Fortcord announcements will also be announced here.*");
+  
   }
+  
+  
+  
 
 
 
