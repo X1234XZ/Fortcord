@@ -773,7 +773,7 @@ client.on('message', message => {
       
       //message.channel.send("This item costs "+ item.cost +" <:VBuck:544626836332871692>")
     
-    message.channel.send("You have " + profile.balance")
+    message.channel.send("You have " + profile.balance)
       
    
   }
