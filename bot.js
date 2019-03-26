@@ -771,7 +771,9 @@ client.on('message', message => {
       
      profile = client.getProfile.get(user.username);
       
-      message.channel.send("This item costs "+ item.cost +" <:VBuck:544626836332871692>")
+      //message.channel.send("This item costs "+ item.cost +" <:VBuck:544626836332871692>")
+    
+    message.channel.send("You have " + profile.balance" ")
       
    
   }
