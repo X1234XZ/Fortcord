@@ -1,11 +1,4 @@
-//if (msg === prefix + 'buy bandages') {
-    //let user = message.mentions.users.first() || message.author;
-    //item = client.getItem.get(user.username);
-   // user_item = client.getUser_item.get(user.username);
-    //user_item.item = user_item.item + "<:bandages:552311892199342109>";
-    //client.setUser_item.run(user_item);
-    //message.channel.send("You bought a <:bandages:552311892199342109>")
-  //}
+
 
 const Discord = require('discord.js');
 var auth = require('./config.json');
@@ -39,6 +32,8 @@ client.on('ready', () => {
   client.setTimestamp = sql.prepare("INSERT OR REPLACE INTO timestamp (id, username, command, executed) VALUES (@id, @username, @command, @executed)");
   client.getUser_item = sql.prepare("SELECT * FROM user_item WHERE user_id = ?");
   client.setUser_item = sql.prepare("INSERT OR REPLACE INTO user_item (id, user_id, item_id) VALUES (@id, @user_id, @item_id);");
+  client.getItem = sql.prepare("SELECT * FROM item WHERE item_name = ?");
+  client.setItem = sql.prepare("INSERT OR REPLACE INTO item (id, item_name, cost, image) VALUES (@id, @item_name, @cost, @image);");
 });
 
 client.on('message', message => {
@@ -766,7 +761,20 @@ client.on('message', message => {
   
   }
   
-  
+    
+  if (msg === prefix + 'buy bandages') {
+    let user = message.mentions.users.first() || message.author;
+    
+      item = client.getItem.get(user.username); 
+      
+    user_item = client.getUser_item.get(user.username);
+      
+     profile = client.getProfile.get(user.username);
+      
+      message.channel.send("This item costs 20 <:VBuck:544626836332871692>")
+      
+   
+  }
   
 
 
