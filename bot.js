@@ -765,7 +765,7 @@ client.on('message', message => {
   if (msg === prefix + 'buy bandages') {
     let user = message.mentions.users.first() || message.author;
     
-      item = client.getItem.get("bandages"); 
+      item = client.getItem.get("Bandages"); 
       
     user_item = client.getUser_item.get(user.item_name);
       
