@@ -1,10 +1,9 @@
-
-
 const Discord = require('discord.js');
 var auth = require('./config.json');
 const client = new Discord.Client();
 const SQLite = require("better-sqlite3");
 const sql = new SQLite('../db/fortcord.db');
+
 
 
 const helloProfile = {
@@ -38,9 +37,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
   var prefix = 'f!'
-  var msg = message.content;
-
-
+  
+  var paramas=message.content.split(' ');
+  var msg = paramas[0];
 
   if (msg === prefix + 'help') {
 
@@ -747,7 +746,7 @@ client.on('message', message => {
   };
   
   
-  if (msg === prefix + 'info stinkbomb') {
+  if (msg === prefix + 'info') {
 
     message.channel.send("**Name:** Stink Bomb \n **Damage per turn:** 10 \n **Duration:** 3 turns \n **Cost:** 200<:VBuck:544626836332871692>", {
       file: "https://gamepedia.cursecdn.com/fortnite_gamepedia/7/77/Stink_bomb_icon.png"
@@ -762,10 +761,14 @@ client.on('message', message => {
   }
   
     
-  if (msg === prefix + 'buy bandages') {
+  if (msg === prefix + 'buy') {
     let user = message.mentions.users.first() || message.author;
+    var good_name=params[1];
     
-      item = client.getItem.get("Bandages"); 
+      item = client.getItem.get(good_name); 
+    if(!item){
+      
+    }
       
     user_item = client.getUser_item.get(user.item_name);
       
